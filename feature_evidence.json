@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-motto-text-displayed-in-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-from-to",
-      "featureTitle": "Update the motto text displayed in the founder section on the Home page (frontend/src/pages/Home.tsx) from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'.",
+      "featureId": "feature-remove-the-english-subtitle-line-service-is-the-highest-duty-translation-subtitle-of-the-motto-from-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-only-the-hindi-motto-text-should-remain-the-english-translation-line-must-be-deleted-entirely",
+      "featureTitle": "Remove the English subtitle line 'Service is the highest duty' (translation/subtitle of the motto 'मानव सेवा परमो धर्मः') from the founder section on the Home page (frontend/src/pages/Home.tsx). Only the Hindi motto text should remain; the English translation line must be deleted entirely.",
       "files": [
         "frontend/src/pages/Home.tsx"
       ],
@@ -17,7 +17,7 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-43"
+        "REQ-44"
       ],
       "confidence": "high"
     }

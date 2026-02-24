@@ -1,35 +1,32 @@
 {
   "kind": "build_request",
-  "title": "Update motto on homepage founder section to 'मानव सेवा परमो धर्मः'",
+  "title": "Remove 'Service is the highest duty' subtitle line from homepage founder section",
   "projectName": "Manavdeep Seva Trust",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-43",
-      "text": "Update the motto text displayed in the founder section on the Home page (frontend/src/pages/Home.tsx) from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'.",
+      "id": "REQ-44",
+      "text": "Remove the English subtitle line 'Service is the highest duty' (translation/subtitle of the motto 'मानव सेवा परमो धर्मः') from the founder section on the Home page (frontend/src/pages/Home.tsx). Only the Hindi motto text should remain; the English translation line must be deleted entirely.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-1"
         ],
         "quotes": [
-          "ISE MAIN PAGE PE ISKI JAGAH - सेवा परमो धर्मः YE \"मानव सेवा परमो धर्मः\" YE DALE"
+          "Service is the highest duty YE LINE HATA DIJIYE"
         ]
       },
       "acceptanceCriteria": [
-        "The founder section on the Home page displays the motto 'मानव सेवा परमो धर्मः' prominently.",
-        "The old motto text 'सेवा परमो धर्मः' no longer appears anywhere on the Home page.",
-        "The visual styling and layout of the founder section remains unchanged."
+        "The text 'Service is the highest duty' does not appear anywhere on the Home page.",
+        "The Hindi motto 'मानव सेवा परमो धर्मः' remains visible in the founder section.",
+        "No other content in the founder section is removed or altered."
       ]
     }
   ],
-  "constraints": [
-    "Only change the motto text string in Home.tsx; do not alter any other content or layout on the page."
-  ],
+  "constraints": [],
   "nonGoals": [
-    "Changing the motto on any other page (About, Contact, etc.).",
-    "Modifying any backend logic.",
-    "Updating the founder photo or its positioning."
+    "Removing or modifying the Hindi motto text 'मानव सेवा परमो धर्मः'.",
+    "Making any other changes to the Home page layout or founder section design."
   ],
   "imageRequirements": {
     "required": [],

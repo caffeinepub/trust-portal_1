@@ -1,21 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update motto on homepage founder section to 'मानव सेवा परमो धर्मः'",
+  "title": "Remove 'Service is the highest duty' subtitle line from homepage founder section",
   "requirements": [
     {
-      "id": "REQ-43",
-      "summary": "Update the motto text in the founder section on the Home page from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'",
+      "id": "REQ-44",
+      "summary": "Remove the English subtitle line 'Service is the highest duty' from the founder section on the Home page while keeping the Hindi motto text intact",
       "acceptanceCriteria": [
-        "The founder section on the Home page displays the motto 'मानव सेवा परमो धर्मः' prominently.",
-        "The old motto text 'सेवा परमो धर्मः' no longer appears anywhere on the Home page.",
-        "The visual styling and layout of the founder section remains unchanged."
+        "The text 'Service is the highest duty' does not appear anywhere on the Home page.",
+        "The Hindi motto 'मानव सेवा परमो धर्मः' remains visible in the founder section.",
+        "No other content in the founder section is removed or altered."
       ],
       "file_operations": [
         {
           "path": "frontend/src/pages/Home.tsx",
           "operation": "modify",
-          "description": "Update the motto text string in the founder section from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'. Locate the text within the founder profile section and replace only the motto string without changing any styling, layout, or other content."
+          "description": "Remove the English subtitle line 'Service is the highest duty' from the founder section. Locate the text element or paragraph containing this English translation of the Hindi motto and delete it entirely. Ensure the Hindi motto 'मानव सेवा परमो धर्मः' remains visible and all other founder section content (name, title, description, image) is unchanged."
         }
       ]
     }

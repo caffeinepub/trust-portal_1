@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 23,
+  "projectStateVersion": 25,
   "summary": "Building a website for a trust/charitable organization",
   "architectural_notes": [
     "Website project for a trust/charitable organization",
@@ -314,6 +314,14 @@
         "REQ-43"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-the-english-subtitle-line-service-is-the-highest-duty-translation-subtitle-of-the-motto-from-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-only-the-hindi-motto-text-should-remain-the-english-translation-line-must-be-deleted-entirely",
+      "title": "Remove the English subtitle line 'Service is the highest duty' (translation/subtitle of the motto 'मानव सेवा परमो धर्मः') from the founder section on the Home page (frontend/src/pages/Home.tsx). Only the Hindi motto text should remain; the English translation line must be deleted entirely.",
+      "reqIds": [
+        "REQ-44"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -426,6 +434,12 @@
     {
       "id": "AR-21",
       "summary": "Update motto on homepage founder section from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Remove the 'Service is the highest duty' line from the homepage (translation/subtitle of the motto)",
       "reqIds": [],
       "status": "pending"
     }

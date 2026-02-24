@@ -1,11 +1,11 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-24T10:32:51.375Z",
-  "summary": "The diff shows that frontend/src/pages/Home.tsx has been updated to display 'मानव सेवा परमो धर्मः' in the founder section, which satisfies REQ-43. The file summary also confirms the updated motto. No other content or layout appears to have been altered.",
+  "generatedAt": "2026-02-24T10:38:19.109Z",
+  "summary": "The diff shows that REQ-44 has been implemented: the English subtitle 'Service is the highest duty' has been removed from the founder section in frontend/src/pages/Home.tsx. The Hindi motto 'मानव सेवा परमो धर्मः' remains visible, and no other founder section content appears to have been removed or altered. The file summary confirms '(English subtitle removed)' and the diff shows only the Hindi motto in the h2 tag without any English translation line beneath it.",
   "missing_requirements": [],
   "hallucinated_features": [],
-  "confidence": 0.97,
+  "confidence": 0.95,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/pages/Home.tsx",

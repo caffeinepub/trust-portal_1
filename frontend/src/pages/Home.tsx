@@ -64,7 +64,6 @@ export default function Home() {
               <div className="flex-1 text-center md:text-left">
                 <div className="mb-6">
                   <h2 className="mb-2 text-4xl font-bold text-primary md:text-5xl">मानव सेवा परमो धर्मः</h2>
-                  <p className="text-lg italic text-muted-foreground">Service is the highest duty</p>
                 </div>
                 <div className="space-y-3">
                   <h3 className="text-2xl font-semibold text-foreground">Anjani Dwivedi (Kavya)</h3>
