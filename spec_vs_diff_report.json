@@ -1,0 +1,14 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-24T10:32:51.375Z",
+  "summary": "The diff shows that frontend/src/pages/Home.tsx has been updated to display 'मानव सेवा परमो धर्मः' in the founder section, which satisfies REQ-43. The file summary also confirms the updated motto. No other content or layout appears to have been altered.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.97,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/pages/Home.tsx",
+    "project_state.json"
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 23,
+  "summary": "Building a website for a trust/charitable organization",
+  "architectural_notes": [
+    "Website project for a trust/charitable organization",
+    "Admin panel required for content management with authentication"
+  ],
+  "known_issues": [
+    "Founder photo on homepage has head being cut off - needs object-position adjustment"
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-homepage-with-a-hero-section-introducing-the-trust-its-mission-statement-and-key-highlights",
+      "title": "Create a homepage with a hero section introducing the trust, its mission statement, and key highlights",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-about-us-page-describing-the-trust-s-history-vision-values-and-leadership-team",
+      "title": "Add an About Us page describing the trust's history, vision, values, and leadership team",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-programs-activities-page-showcasing-the-trust-s-initiatives-and-ongoing-projects",
+      "title": "Create a Programs/Activities page showcasing the trust's initiatives and ongoing projects",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-us-page-with-contact-information-including-address-phone-email-and-a-contact-form",
+      "title": "Add a Contact Us page with contact information including address, phone, email, and a contact form",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-navigation-menu-with-links-to-all-main-pages-home-about-programs-contact",
+      "title": "Implement a navigation menu with links to all main pages (Home, About, Programs, Contact)",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-footer-with-trust-information-quick-links-and-social-media-placeholders",
+      "title": "Add a footer with trust information, quick links, and social media placeholders",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-professional-trustworthy-visual-design-theme-with-warm-compassionate-colors-earth-tones-greens-or-warm-neutrals-clear-typography-optimized-for-readability-and-a-clean-layout-that-conveys-credibility-and-social-responsibility",
+      "title": "Apply a professional, trustworthy visual design theme with warm, compassionate colors (earth tones, greens, or warm neutrals), clear typography optimized for readability, and a clean layout that conveys credibility and social responsibility",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-generated-trust-website-images-as-static-assets-in-frontend-public-assets-generated",
+      "title": "Render generated trust website images as static assets in frontend/public/assets/generated",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-manavdeep-seva-trust-logo-uploaded-as-logo-jpeg-to-the-website-navigation-header-replacing-or-complementing-the-current-text-based-branding",
+      "title": "Add the Manavdeep Seva Trust logo (uploaded as LOGO.jpeg) to the website navigation header, replacing or complementing the current text-based branding",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-the-uploaded-logo-as-a-static-asset-in-frontend-public-assets-generated-with-an-appropriate-filename",
+      "title": "Store the uploaded logo as a static asset in frontend/public/assets/generated with an appropriate filename",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-founder-information-section-to-the-about-page-displaying-founder-anjani-dwivedi-kavya-with-contact-number-9651044109",
+      "title": "Add founder information section to the About page displaying 'Founder: Anjani Dwivedi (Kavya)' with contact number '9651044109'",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-page-to-include-founder-contact-information-showing-anjani-dwivedi-kavya-9651044109-in-the-contact-details-section",
+      "title": "Update the Contact page to include founder contact information showing 'Anjani Dwivedi (Kavya) - 9651044109' in the contact details section",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-donations-page-with-a-hero-section-explaining-the-importance-of-donations-donation-options-one-time-monthly-custom-amounts-and-payment-information-including-bank-details-and-upi-details-for-accepting-donations",
+      "title": "Create a new Donations page with a hero section explaining the importance of donations, donation options (one-time, monthly, custom amounts), and payment information including bank details and UPI details for accepting donations",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-gallery-page-with-tabbed-or-sectioned-layout-showing-both-photo-gallery-and-video-gallery-with-grid-layouts-for-displaying-images-and-embedded-video-content",
+      "title": "Create a new Gallery page with tabbed or sectioned layout showing both photo gallery and video gallery, with grid layouts for displaying images and embedded video content",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-navigation-component-to-include-links-to-the-new-donations-and-gallery-pages-in-the-main-menu",
+      "title": "Update the Navigation component to include links to the new Donations and Gallery pages in the main menu",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-component-to-include-quick-links-to-the-donations-and-gallery-pages",
+      "title": "Update the Footer component to include quick links to the Donations and Gallery pages",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-app-tsx-router-configuration-to-register-routes-for-the-new-donations-page-and-gallery-page",
+      "title": "Update App.tsx router configuration to register routes for the new Donations page and Gallery page",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-generated-gallery-images-as-static-assets-in-frontend-public-assets-generated-for-use-in-the-photo-gallery-section",
+      "title": "Render generated gallery images as static assets in frontend/public/assets/generated for use in the photo gallery section",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-page-to-display-the-complete-office-address-deoria-uttar-pradesh-in-the-contact-details-section",
+      "title": "Update the Contact page to display the complete office address 'DEORIA, UTTAR PRADESH' in the contact details section",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-page-to-display-phone-number-9651044109-in-the-contact-details-section",
+      "title": "Update the Contact page to display phone number '9651044109' in the contact details section",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-page-to-display-email-address-manavdeepsevatrust-gmail-com-in-the-contact-details-section",
+      "title": "Update the Contact page to display email address 'manavdeepsevatrust@gmail.com' in the contact details section",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-component-to-display-the-office-address-deoria-uttar-pradesh-phone-9651044109-and-email-manavdeepsevatrust-gmail-com-in-the-trust-information-section",
+      "title": "Update the Footer component to display the office address 'DEORIA, UTTAR PRADESH', phone '9651044109', and email 'manavdeepsevatrust@gmail.com' in the trust information section",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-leadership-team-section-from-the-about-page-frontend-src-pages-about-tsx",
+      "title": "Remove the Leadership Team section from the About page (frontend/src/pages/About.tsx)",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-all-placeholder-photos-from-the-gallery-page-photo-gallery-section-frontend-src-pages-gallery-tsx",
+      "title": "Remove all placeholder photos from the Gallery page photo gallery section (frontend/src/pages/Gallery.tsx)",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-all-placeholder-videos-from-the-gallery-page-video-gallery-section-frontend-src-pages-gallery-tsx",
+      "title": "Remove all placeholder videos from the Gallery page video gallery section (frontend/src/pages/Gallery.tsx)",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-admin-page-frontend-src-pages-admin-tsx-with-internet-identity-authentication-requirement-that-displays-upload-interface-only-to-authenticated-users",
+      "title": "Create a new Admin page (frontend/src/pages/Admin.tsx) with Internet Identity authentication requirement that displays upload interface only to authenticated users",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-photo-upload-form-to-admin-page-with-file-input-accepting-image-formats-jpeg-png-webp-title-field-and-upload-button-that-submits-to-backend",
+      "title": "Add photo upload form to Admin page with file input accepting image formats (JPEG, PNG, WebP), title field, and upload button that submits to backend",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-video-upload-form-to-admin-page-with-file-input-accepting-video-formats-mp4-webm-title-field-and-upload-button-that-submits-to-backend",
+      "title": "Add video upload form to Admin page with file input accepting video formats (MP4, WebM), title field, and upload button that submits to backend",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-list-of-uploaded-photos-in-admin-page-with-thumbnails-titles-upload-dates-and-delete-buttons-for-content-management",
+      "title": "Display list of uploaded photos in Admin page with thumbnails, titles, upload dates, and delete buttons for content management",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-list-of-uploaded-videos-in-admin-page-with-thumbnails-previews-titles-upload-dates-and-delete-buttons-for-content-management",
+      "title": "Display list of uploaded videos in Admin page with thumbnails/previews, titles, upload dates, and delete buttons for content management",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-gallery-page-frontend-src-pages-gallery-tsx-to-fetch-and-display-uploaded-photos-from-backend-in-the-photo-gallery-section-replacing-the-current-empty-state",
+      "title": "Update Gallery page (frontend/src/pages/Gallery.tsx) to fetch and display uploaded photos from backend in the photo gallery section, replacing the current empty state",
+      "reqIds": [
+        "REQ-35"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-gallery-page-frontend-src-pages-gallery-tsx-to-fetch-and-display-uploaded-videos-from-backend-in-the-video-gallery-section-replacing-the-current-empty-state",
+      "title": "Update Gallery page (frontend/src/pages/Gallery.tsx) to fetch and display uploaded videos from backend in the video gallery section, replacing the current empty state",
+      "reqIds": [
+        "REQ-36"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-admin-page-route-to-app-tsx-router-configuration-and-add-admin-link-to-navigation-component-visible-only-to-authenticated-users",
+      "title": "Add Admin page route to App.tsx router configuration and add Admin link to Navigation component, visible only to authenticated users",
+      "reqIds": [
+        "REQ-37"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-react-query-hooks-for-photo-and-video-upload-mutations-with-automatic-cache-invalidation-on-success-to-refresh-the-gallery-page",
+      "title": "Create React Query hooks for photo and video upload mutations with automatic cache invalidation on success to refresh the Gallery page",
+      "reqIds": [
+        "REQ-38"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-founder-section-to-the-home-page-frontend-src-pages-home-tsx-displaying-the-uploaded-founder-photo-photo0-jpeg-with-the-motto-prominently-displayed",
+      "title": "Add a new founder section to the Home page (frontend/src/pages/Home.tsx) displaying the uploaded founder photo PHOTO0.jpeg with the motto 'सेवा परमो धर्मः' prominently displayed",
+      "reqIds": [
+        "REQ-39"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-founder-photo-display-issue-on-the-home-page-frontend-src-pages-home-tsx-ensure-the-image-src-path-correctly-references-the-static-asset-at-assets-generated-founder-anjani-jpeg-verify-the-img-tag-has-correct-alt-text-is-not-hidden-by-css-and-has-explicit-dimensions-or-min-height-so-it-is-visible-when-the-asset-is-present",
+      "title": "Fix the founder photo display issue on the Home page (frontend/src/pages/Home.tsx). Ensure the image src path correctly references the static asset at '/assets/generated/founder-anjani.jpeg'. Verify the <img> tag has correct alt text, is not hidden by CSS, and has explicit dimensions or min-height so it is visible when the asset is present.",
+      "reqIds": [
+        "REQ-41"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-founder-photo-display-on-the-home-page-frontend-src-pages-home-tsx-so-the-subject-s-head-is-not-cropped-adjust-the-css-object-position-property-on-the-founder-image-currently-at-assets-generated-founder-anjani-jpeg-from-its-current-value-to-object-position-top-or-object-position-center-top-so-the-top-of-the-image-head-face-area-is-fully-visible-within-the-container-ensure-the-image-container-height-and-object-fit-remain-visually-balanced",
+      "title": "Fix the founder photo display on the Home page (frontend/src/pages/Home.tsx) so the subject's head is not cropped. Adjust the CSS object-position property on the founder image (currently at '/assets/generated/founder-anjani.jpeg') from its current value to 'object-position: top' or 'object-position: center top' so the top of the image (head/face area) is fully visible within the container. Ensure the image container height and object-fit remain visually balanced.",
+      "reqIds": [
+        "REQ-42"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-motto-text-displayed-in-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-from-to",
+      "title": "Update the motto text displayed in the founder section on the Home page (frontend/src/pages/Home.tsx) from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'.",
+      "reqIds": [
+        "REQ-43"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create trust website with basic pages and information",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add logo to the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add founder information: Anjani Dwivedi (Kavya) with contact 9651044109",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add donation section to the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add photo and video gallery to the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add office address (Deoria, Uttar Pradesh), phone (9651044109), and email (manavdeepsevatrust@gmail.com) to contact information",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Remove Leadership Team section from About page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Remove placeholder photos and videos from Gallery page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add admin panel with photo and video upload functionality, content management, and password protection",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Add backend functions to main.mo actor for uploading photos with fields for imageData (Blob), title (Text), and uploadedAt (Int) timestamp, storing them in a stable array",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Add backend functions to main.mo actor for uploading videos with fields for videoUrl (Text), title (Text), and uploadedAt (Int) timestamp, storing them in a stable array",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Add backend query functions to main.mo actor for retrieving all uploaded photos and all uploaded videos, returning arrays sorted by uploadedAt timestamp (newest first)",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Add backend delete functions to main.mo actor for removing photos and videos by ID, with caller authentication check to ensure only the uploader or admin can delete",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Add founder photo to homepage with motto 'सेवा परमो धर्मः'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Store the uploaded founder photo PHOTO0.jpeg as a static asset in frontend/public/assets/generated with the filename founder-anjani.jpeg for use in the homepage founder section",
+      "reqIds": [
+        "REQ-40"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Fix founder photo cropping issue on homepage - head is being cut off, adjust object-position or crop to show full face/head",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Update motto on homepage founder section from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Trust Portal",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

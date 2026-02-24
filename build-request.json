@@ -1,0 +1,38 @@
+{
+  "kind": "build_request",
+  "title": "Update motto on homepage founder section to 'मानव सेवा परमो धर्मः'",
+  "projectName": "Manavdeep Seva Trust",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-43",
+      "text": "Update the motto text displayed in the founder section on the Home page (frontend/src/pages/Home.tsx) from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "ISE MAIN PAGE PE ISKI JAGAH - सेवा परमो धर्मः YE \"मानव सेवा परमो धर्मः\" YE DALE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The founder section on the Home page displays the motto 'मानव सेवा परमो धर्मः' prominently.",
+        "The old motto text 'सेवा परमो धर्मः' no longer appears anywhere on the Home page.",
+        "The visual styling and layout of the founder section remains unchanged."
+      ]
+    }
+  ],
+  "constraints": [
+    "Only change the motto text string in Home.tsx; do not alter any other content or layout on the page."
+  ],
+  "nonGoals": [
+    "Changing the motto on any other page (About, Contact, etc.).",
+    "Modifying any backend logic.",
+    "Updating the founder photo or its positioning."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

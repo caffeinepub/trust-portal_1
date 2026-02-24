@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update motto on homepage founder section to 'मानव सेवा परमो धर्मः'",
+  "requirements": [
+    {
+      "id": "REQ-43",
+      "summary": "Update the motto text in the founder section on the Home page from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'",
+      "acceptanceCriteria": [
+        "The founder section on the Home page displays the motto 'मानव सेवा परमो धर्मः' prominently.",
+        "The old motto text 'सेवा परमो धर्मः' no longer appears anywhere on the Home page.",
+        "The visual styling and layout of the founder section remains unchanged."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Update the motto text string in the founder section from 'सेवा परमो धर्मः' to 'मानव सेवा परमो धर्मः'. Locate the text within the founder profile section and replace only the motto string without changing any styling, layout, or other content."
+        }
+      ]
+    }
+  ]
+}
