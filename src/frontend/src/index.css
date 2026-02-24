@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Warm, earthy color palette for trust website */
+        --background: 0.98 0.01 85;
+        --foreground: 0.25 0.02 85;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.25 0.02 85;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0.02 85;
+        
+        /* Primary: Warm earth brown */
+        --primary: 0.45 0.08 65;
+        --primary-foreground: 0.98 0.01 85;
+        
+        /* Secondary: Soft beige */
+        --secondary: 0.92 0.02 75;
+        --secondary-foreground: 0.35 0.03 65;
+        
+        /* Muted: Light warm gray */
+        --muted: 0.95 0.01 80;
+        --muted-foreground: 0.55 0.02 75;
+        
+        /* Accent: Warm terracotta */
+        --accent: 0.88 0.03 70;
+        --accent-foreground: 0.35 0.03 65;
+        
+        /* Trust: Compassionate coral */
+        --trust: 0.65 0.15 25;
+        
+        /* Nature: Sustainable green */
+        --nature: 0.55 0.12 145;
+        
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        
+        --border: 0.90 0.01 80;
+        --input: 0.90 0.01 80;
+        --ring: 0.45 0.08 65;
+        
+        --chart-1: 0.55 0.12 145;
+        --chart-2: 0.65 0.15 25;
+        --chart-3: 0.45 0.08 65;
+        --chart-4: 0.70 0.10 50;
+        --chart-5: 0.60 0.08 180;
+    }
+
+    .dark {
+        --background: 0.18 0.02 85;
+        --foreground: 0.95 0.01 85;
+        
+        --card: 0.22 0.02 85;
+        --card-foreground: 0.95 0.01 85;
+        
+        --popover: 0.20 0.02 85;
+        --popover-foreground: 0.95 0.01 85;
+        
+        /* Primary: Lighter warm earth for dark mode */
+        --primary: 0.75 0.08 65;
+        --primary-foreground: 0.20 0.02 85;
+        
+        --secondary: 0.28 0.02 75;
+        --secondary-foreground: 0.95 0.01 85;
+        
+        --muted: 0.30 0.02 80;
+        --muted-foreground: 0.70 0.02 75;
+        
+        --accent: 0.35 0.03 70;
+        --accent-foreground: 0.95 0.01 85;
+        
+        /* Trust: Brighter coral for dark mode */
+        --trust: 0.70 0.18 25;
+        
+        /* Nature: Brighter green for dark mode */
+        --nature: 0.65 0.15 145;
+        
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.95 0.01 85;
+        
+        --border: 0.30 0.02 80;
+        --input: 0.30 0.02 80;
+        --ring: 0.75 0.08 65;
+        
+        --chart-1: 0.65 0.15 145;
+        --chart-2: 0.70 0.18 25;
+        --chart-3: 0.75 0.08 65;
+        --chart-4: 0.75 0.12 50;
+        --chart-5: 0.70 0.10 180;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

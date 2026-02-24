@@ -1,0 +1,15 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with routes for Home, About, Programs, Donations, Gallery, and Contact pages, all wrapped in a Layout component.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component that provides consistent Navigation header and Footer across all pages using Outlet for page content.",
+  "frontend/src/components/Navigation.tsx": "Responsive navigation header with Manavdeep Seva Trust logo, desktop menu with six links (Home, About Us, Programs, Donations, Gallery, Contact), mobile hamburger menu, and active route highlighting.",
+  "frontend/src/components/Footer.tsx": "Footer component with Manavdeep Seva Trust information, quick links, founder contact details (Anjani Dwivedi), office address (Deoria, Uttar Pradesh), phone (9651044109), email (manavdeepsevatrust@gmail.com), copyright notice, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/pages/Home.tsx": "Homepage featuring hero section with banner image, mission statement, key highlights with icons, and call-to-action sections.",
+  "frontend/src/pages/About.tsx": "About page displaying trust history, vision, core values, and a dedicated founder section featuring Anjani Dwivedi (Kavya) with contact number 9651044109; Leadership Team section has been removed.",
+  "frontend/src/pages/Programs.tsx": "Programs page showcasing six initiative categories with icons, descriptions, activities, and impact statistics.",
+  "frontend/src/pages/Contact.tsx": "Contact page with founder contact information (Anjani Dwivedi - 9651044109), office address (Deoria, Uttar Pradesh), phone (9651044109), email (manavdeepsevatrust@gmail.com) displayed prominently in the contact details section with icons, along with office hours and a functional contact form.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hook for submitting contact form data to the backend actor with proper error handling and cache invalidation.",
+  "frontend/src/index.css": "Global styles with warm, earthy OKLCH color palette (browns, corals, greens) for both light and dark modes, optimized for trust/charitable organization aesthetic.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom color tokens (trust, nature), enhanced typography, custom shadows, and extended theme for professional trust website design.",
+  "frontend/src/pages/Donations.tsx": "Donations page featuring hero section with donation-hero image, impact statistics, multiple donation amount options with impact descriptions, custom amount input, and detailed payment information sections displaying bank account and UPI details with warm earth-tone styling.",
+  "frontend/src/pages/Gallery.tsx": "Gallery page with tabbed interface showing empty state messages for both photo and video galleries, indicating no media is currently available; all placeholder images and videos have been removed."
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-the-leadership-team-section-from-the-about-page-frontend-src-pages-about-tsx",
+      "featureTitle": "Remove the Leadership Team section from the About page (frontend/src/pages/About.tsx)",
+      "files": [
+        "frontend/src/pages/About.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-23"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-all-placeholder-photos-from-the-gallery-page-photo-gallery-section-frontend-src-pages-gallery-tsx",
+      "featureTitle": "Remove all placeholder photos from the Gallery page photo gallery section (frontend/src/pages/Gallery.tsx)",
+      "files": [
+        "frontend/src/pages/Gallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-24"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-all-placeholder-videos-from-the-gallery-page-video-gallery-section-frontend-src-pages-gallery-tsx",
+      "featureTitle": "Remove all placeholder videos from the Gallery page video gallery section (frontend/src/pages/Gallery.tsx)",
+      "files": [
+        "frontend/src/pages/Gallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-25"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

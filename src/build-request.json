@@ -1,0 +1,76 @@
+{
+  "kind": "build_request",
+  "title": "Remove Leadership Team section and placeholder media from Gallery",
+  "projectName": "Manavdeep Seva Trust",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-23",
+      "text": "Remove the Leadership Team section from the About page (frontend/src/pages/About.tsx)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "LEADERSHIP TEAM KA NAAM HATA DEN"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Leadership Team section is completely removed from the About page",
+        "Page layout remains clean and professional after removal",
+        "Other sections (founder info, history, mission, values) remain intact"
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "text": "Remove all placeholder photos from the Gallery page photo gallery section (frontend/src/pages/Gallery.tsx)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "JO PHOTOS OR VIDEOS HAI VO MERE DWARA UPLOAD NHI HAI USE BHI HATA DE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All placeholder photo entries are removed from the photo gallery tab",
+        "Photo gallery section displays empty state or message indicating no photos available",
+        "Tab navigation structure remains functional"
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "text": "Remove all placeholder videos from the Gallery page video gallery section (frontend/src/pages/Gallery.tsx)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "JO PHOTOS OR VIDEOS HAI VO MERE DWARA UPLOAD NHI HAI USE BHI HATA DE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All placeholder video entries are removed from the video gallery tab",
+        "Video gallery section displays empty state or message indicating no videos available",
+        "Tab navigation structure remains functional"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the Navigation component or main layout structure",
+    "Preserve the founder information section on the About page",
+    "Keep the Gallery page structure intact with tab navigation, only remove media content"
+  ],
+  "nonGoals": [
+    "Adding new content to replace removed sections",
+    "Restructuring the entire About or Gallery pages",
+    "Modifying the backend contact form functionality"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
