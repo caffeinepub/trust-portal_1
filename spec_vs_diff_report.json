@@ -1,14 +1,24 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-24T10:38:19.109Z",
-  "summary": "The diff shows that REQ-44 has been implemented: the English subtitle 'Service is the highest duty' has been removed from the founder section in frontend/src/pages/Home.tsx. The Hindi motto 'मानव सेवा परमो धर्मः' remains visible, and no other founder section content appears to have been removed or altered. The file summary confirms '(English subtitle removed)' and the diff shows only the Hindi motto in the h2 tag without any English translation line beneath it.",
-  "missing_requirements": [],
+  "generatedAt": "2026-02-24T11:44:18.433Z",
+  "summary": "The diff modifies frontend/src/pages/Gallery.tsx, but instead of removing gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg from a hardcoded array of gallery-photo-01.jpeg through gallery-photo-30.jpeg, the implementation shows a completely different static photo array using WhatsApp-named image files with 33 entries (static-1 through static-33). The file summary confirms '33 static WhatsApp activity photos (static-1 through static-33, with PHOTO0.jpeg, PHOTO0-1.jpeg, and PHOTO0-2.jpeg removed)'. The spirit of the requirement to remove the last 3 static photos does not appear to be implemented, as the array still contains 33 entries.",
+  "missing_requirements": [
+    {
+      "id": "REQ-48",
+      "requirement": "Remove gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg from the hardcoded static photos array so only gallery-photo-01.jpeg through gallery-photo-27.jpeg remain.",
+      "reason": "The diff shows the Gallery.tsx static photos array uses WhatsApp-named filenames rather than gallery-photo-XX.jpeg naming, and still contains 33 entries (static-1 through static-33). No photos were removed from the static array; the count was not reduced by 3 as required.",
+      "evidence": [
+        "frontend/src/pages/Gallery.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
   "hallucinated_features": [],
-  "confidence": 0.95,
+  "confidence": 0.72,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/pages/Home.tsx",
+    "frontend/src/pages/Gallery.tsx",
     "project_state.json"
   ]
 }

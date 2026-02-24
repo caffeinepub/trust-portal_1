@@ -1,32 +1,35 @@
 {
   "kind": "build_request",
-  "title": "Remove 'Service is the highest duty' subtitle line from homepage founder section",
-  "projectName": "Manavdeep Seva Trust",
+  "title": "Delete last 3 static photos from the gallery",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-44",
-      "text": "Remove the English subtitle line 'Service is the highest duty' (translation/subtitle of the motto 'मानव सेवा परमो धर्मः') from the founder section on the Home page (frontend/src/pages/Home.tsx). Only the Hindi motto text should remain; the English translation line must be deleted entirely.",
+      "id": "REQ-48",
+      "text": "Remove the last 3 static photos from the Gallery page (frontend/src/pages/Gallery.tsx). The static photos are currently hardcoded as gallery-photo-01.jpeg through gallery-photo-30.jpeg. Remove gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg from the hardcoded static photos array, so that only gallery-photo-01.jpeg through gallery-photo-27.jpeg remain displayed in the photo gallery section.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-1"
         ],
         "quotes": [
-          "Service is the highest duty YE LINE HATA DIJIYE"
+          "DELETE LAST 3 PHOTOS"
         ]
       },
       "acceptanceCriteria": [
-        "The text 'Service is the highest duty' does not appear anywhere on the Home page.",
-        "The Hindi motto 'मानव सेवा परमो धर्मः' remains visible in the founder section.",
-        "No other content in the founder section is removed or altered."
+        "gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg are no longer rendered in the Gallery page photo section",
+        "gallery-photo-01.jpeg through gallery-photo-27.jpeg continue to display correctly in the photo gallery grid",
+        "Dynamically fetched backend photos are unaffected and still displayed correctly",
+        "The photo gallery grid layout remains responsive and visually consistent with 27 static photos"
       ]
     }
   ],
-  "constraints": [],
+  "constraints": [
+    "Only remove the last 3 static photo entries (gallery-photo-28.jpeg, gallery-photo-29.jpeg, gallery-photo-30.jpeg) from the hardcoded array; do not remove any other photos or alter backend photo fetching logic"
+  ],
   "nonGoals": [
-    "Removing or modifying the Hindi motto text 'मानव सेवा परमो धर्मः'.",
-    "Making any other changes to the Home page layout or founder section design."
+    "Deleting photos from the backend or any uploaded dynamic photos",
+    "Modifying the video gallery section",
+    "Changing the Admin page or any upload functionality"
   ],
   "imageRequirements": {
     "required": [],

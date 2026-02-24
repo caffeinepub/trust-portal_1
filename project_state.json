@@ -1,13 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 25,
+  "projectStateVersion": 31,
   "summary": "Building a website for a trust/charitable organization",
   "architectural_notes": [
     "Website project for a trust/charitable organization",
     "Admin panel required for content management with authentication"
   ],
   "known_issues": [
-    "Founder photo on homepage has head being cut off - needs object-position adjustment"
+    "Founder photo on homepage has head being cut off - needs object-position adjustment",
+    "Photos in the gallery are not displaying properly for the user"
   ],
   "isFixRequest": false,
   "existing_features": [
@@ -322,6 +323,30 @@
         "REQ-44"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-gallery-page-frontend-src-pages-gallery-tsx-to-display-the-30-new-static-photos-gallery-photo-01-jpeg-through-gallery-photo-30-jpeg-from-assets-generated-in-the-photo-gallery-section-these-static-photos-should-be-shown-alongside-any-dynamically-uploaded-photos-fetched-from-the-backend-display-them-in-a-responsive-grid-layout",
+      "title": "Update the Gallery page (frontend/src/pages/Gallery.tsx) to display the 30 new static photos (gallery-photo-01.jpeg through gallery-photo-30.jpeg) from /assets/generated/ in the photo gallery section. These static photos should be shown alongside any dynamically uploaded photos fetched from the backend. Display them in a responsive grid layout.",
+      "reqIds": [
+        "REQ-46"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-photo-gallery-display-in-frontend-src-pages-gallery-tsx-so-that-all-30-static-photos-gallery-photo-01-jpeg-through-gallery-photo-30-jpeg-from-assets-generated-render-visibly-and-correctly-ensure-each-image-tag-has-a-valid-src-path-starting-with-assets-generated-correct-alt-text-explicit-width-and-height-or-a-defined-container-size-object-fit-cover-and-no-css-rules-that-would-hide-or-zero-size-the-images-also-verify-that-dynamically-fetched-backend-photos-render-correctly-by-ensuring-their-blob-data-is-converted-to-a-valid-object-url-or-base64-data-uri-before-being-assigned-to-the-img-src",
+      "title": "Fix the photo gallery display in frontend/src/pages/Gallery.tsx so that all 30 static photos (gallery-photo-01.jpeg through gallery-photo-30.jpeg from /assets/generated/) render visibly and correctly. Ensure each image tag has a valid src path starting with '/assets/generated/', correct alt text, explicit width and height or a defined container size, object-fit: cover, and no CSS rules that would hide or zero-size the images. Also verify that dynamically fetched backend photos render correctly by ensuring their blob data is converted to a valid object URL or base64 data URI before being assigned to the img src.",
+      "reqIds": [
+        "REQ-47"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-last-3-static-photos-from-the-gallery-page-frontend-src-pages-gallery-tsx-the-static-photos-are-currently-hardcoded-as-gallery-photo-01-jpeg-through-gallery-photo-30-jpeg-remove-gallery-photo-28-jpeg-gallery-photo-29-jpeg-and-gallery-photo-30-jpeg-from-the-hardcoded-static-photos-array-so-that-only-gallery-photo-01-jpeg-through-gallery-photo-27-jpeg-remain-displayed-in-the-photo-gallery-section",
+      "title": "Remove the last 3 static photos from the Gallery page (frontend/src/pages/Gallery.tsx). The static photos are currently hardcoded as gallery-photo-01.jpeg through gallery-photo-30.jpeg. Remove gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg from the hardcoded static photos array, so that only gallery-photo-01.jpeg through gallery-photo-27.jpeg remain displayed in the photo gallery section.",
+      "reqIds": [
+        "REQ-48"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -440,6 +465,26 @@
     {
       "id": "AR-22",
       "summary": "Remove the 'Service is the highest duty' line from the homepage (translation/subtitle of the motto)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Upload a user-provided photo to the photo gallery",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Store all 30 uploaded activity photos as static assets in frontend/public/assets/generated/ with sequential filenames: gallery-photo-01.jpeg through gallery-photo-30.jpeg.",
+      "reqIds": [
+        "REQ-45"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Delete the last 3 photos from the gallery",
       "reqIds": [],
       "status": "pending"
     }

@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-english-subtitle-line-service-is-the-highest-duty-translation-subtitle-of-the-motto-from-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-only-the-hindi-motto-text-should-remain-the-english-translation-line-must-be-deleted-entirely",
-      "featureTitle": "Remove the English subtitle line 'Service is the highest duty' (translation/subtitle of the motto 'मानव सेवा परमो धर्मः') from the founder section on the Home page (frontend/src/pages/Home.tsx). Only the Hindi motto text should remain; the English translation line must be deleted entirely.",
+      "featureId": "feature-remove-the-last-3-static-photos-from-the-gallery-page-frontend-src-pages-gallery-tsx-the-static-photos-are-currently-hardcoded-as-gallery-photo-01-jpeg-through-gallery-photo-30-jpeg-remove-gallery-photo-28-jpeg-gallery-photo-29-jpeg-and-gallery-photo-30-jpeg-from-the-hardcoded-static-photos-array-so-that-only-gallery-photo-01-jpeg-through-gallery-photo-27-jpeg-remain-displayed-in-the-photo-gallery-section",
+      "featureTitle": "Remove the last 3 static photos from the Gallery page (frontend/src/pages/Gallery.tsx). The static photos are currently hardcoded as gallery-photo-01.jpeg through gallery-photo-30.jpeg. Remove gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg from the hardcoded static photos array, so that only gallery-photo-01.jpeg through gallery-photo-27.jpeg remain displayed in the photo gallery section.",
       "files": [
-        "frontend/src/pages/Home.tsx"
+        "frontend/src/pages/Gallery.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,7 +17,7 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-44"
+        "REQ-48"
       ],
       "confidence": "high"
     }

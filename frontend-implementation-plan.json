@@ -1,21 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove 'Service is the highest duty' subtitle line from homepage founder section",
+  "title": "Delete last 3 static photos from the gallery",
   "requirements": [
     {
-      "id": "REQ-44",
-      "summary": "Remove the English subtitle line 'Service is the highest duty' from the founder section on the Home page while keeping the Hindi motto text intact",
+      "id": "REQ-48",
+      "summary": "Remove the last 3 static photos (gallery-photo-28.jpeg, gallery-photo-29.jpeg, gallery-photo-30.jpeg) from the hardcoded static photos array in the Gallery page, retaining only gallery-photo-01.jpeg through gallery-photo-27.jpeg",
       "acceptanceCriteria": [
-        "The text 'Service is the highest duty' does not appear anywhere on the Home page.",
-        "The Hindi motto 'मानव सेवा परमो धर्मः' remains visible in the founder section.",
-        "No other content in the founder section is removed or altered."
+        "gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg are no longer rendered in the Gallery page photo section",
+        "gallery-photo-01.jpeg through gallery-photo-27.jpeg continue to display correctly in the photo gallery grid",
+        "Dynamically fetched backend photos are unaffected and still displayed correctly",
+        "The photo gallery grid layout remains responsive and visually consistent with 27 static photos"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/Home.tsx",
+          "path": "frontend/src/pages/Gallery.tsx",
           "operation": "modify",
-          "description": "Remove the English subtitle line 'Service is the highest duty' from the founder section. Locate the text element or paragraph containing this English translation of the Hindi motto and delete it entirely. Ensure the Hindi motto 'मानव सेवा परमो धर्मः' remains visible and all other founder section content (name, title, description, image) is unchanged."
+          "description": "Remove the last 3 entries (gallery-photo-28.jpeg, gallery-photo-29.jpeg, gallery-photo-30.jpeg) from the hardcoded static photos array. Update the array to include only gallery-photo-01.jpeg through gallery-photo-27.jpeg. Ensure the Photos tab continues to render both the remaining 27 static photos and any dynamically fetched photos from the backend using the useGetAllPhotos hook. Verify that the grid layout remains responsive and visually consistent."
         }
       ]
     }

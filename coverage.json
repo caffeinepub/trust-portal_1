@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-24T10:38:19.112Z",
+  "generatedAt": "2026-02-24T11:44:18.436Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,14 +11,14 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-44",
-        "summary": "Remove the English subtitle line 'Service is the highest duty' (translation/subtitle of the motto 'मानव सेवा परमो धर्मः') from the founder section on the Home page (frontend/src/pages/Home.tsx). Only the Hindi motto text should remain; the English translation line must be deleted entirely.",
+        "id": "REQ-48",
+        "summary": "Remove the last 3 static photos from the Gallery page (frontend/src/pages/Gallery.tsx). The static photos are currently hardcoded as gallery-photo-01.jpeg through gallery-photo-30.jpeg. Remove gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg from the hardcoded static photos array, so that only gallery-photo-01.jpeg through gallery-photo-27.jpeg remain displayed in the photo gallery section.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/pages/Home.tsx"
+          "frontend/src/pages/Gallery.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/pages/Home.tsx"
+          "frontend/src/pages/Gallery.tsx"
         ]
       }
     ]
@@ -28,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/pages/Home.tsx",
+    "frontend/src/pages/Gallery.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",
