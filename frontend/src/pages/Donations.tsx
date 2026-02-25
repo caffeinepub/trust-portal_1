@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { Heart, HandHeart, Users, Leaf, CreditCard, Building2, Smartphone } from 'lucide-react';
+import { Heart, HandHeart, Users, Leaf, CreditCard, Building2, Smartphone, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -191,15 +191,20 @@ export default function Donations() {
               </Card>
             </div>
 
-            <div className="mt-8 rounded-lg border border-border bg-card p-6 text-center">
-              <p className="text-sm text-muted-foreground">
+            {/* Transaction Details Notice */}
+            <div className="mt-8 flex items-start gap-3 rounded-lg border border-primary/30 bg-primary/5 p-5 text-center shadow-sm">
+              <Info className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <p className="text-sm text-foreground md:text-base">
                 After making your donation, please send the transaction details to{' '}
-                <a href="tel:9651044109" className="font-medium text-primary hover:underline">
+                <a href="tel:9651044109" className="font-semibold text-primary hover:underline">
                   9651044109
                 </a>{' '}
                 or email us at{' '}
-                <a href="mailto:info@manavdeeptrust.org" className="font-medium text-primary hover:underline">
-                  info@manavdeeptrust.org
+                <a
+                  href="mailto:manavdeepsevatrust@gmail.com"
+                  className="font-semibold text-primary hover:underline"
+                >
+                  manavdeepsevatrust@gmail.com
                 </a>
               </p>
             </div>

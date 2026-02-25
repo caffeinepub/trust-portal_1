@@ -1,22 +1,37 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Delete last 3 static photos from the gallery",
+  "title": "Add 'Teacher, Writer and Social Worker' roles to founder description",
   "requirements": [
     {
-      "id": "REQ-48",
-      "summary": "Remove the last 3 static photos (gallery-photo-28.jpeg, gallery-photo-29.jpeg, gallery-photo-30.jpeg) from the hardcoded static photos array in the Gallery page, retaining only gallery-photo-01.jpeg through gallery-photo-27.jpeg",
+      "id": "REQ-52",
+      "summary": "Update the founder description on the About page to include the roles 'Teacher, Writer and Social Worker' as a subtitle beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
       "acceptanceCriteria": [
-        "gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg are no longer rendered in the Gallery page photo section",
-        "gallery-photo-01.jpeg through gallery-photo-27.jpeg continue to display correctly in the photo gallery grid",
-        "Dynamically fetched backend photos are unaffected and still displayed correctly",
-        "The photo gallery grid layout remains responsive and visually consistent with 27 static photos"
+        "The text 'Teacher, Writer and Social Worker' appears on the About page beneath or alongside the founder's name 'Anjani Dwivedi (Kavya)'.",
+        "The roles text is styled consistently with the existing About page design (e.g., as a subtitle, badge, or secondary text).",
+        "No other content on the About page is removed or rearranged."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/Gallery.tsx",
+          "path": "frontend/src/pages/About.tsx",
           "operation": "modify",
-          "description": "Remove the last 3 entries (gallery-photo-28.jpeg, gallery-photo-29.jpeg, gallery-photo-30.jpeg) from the hardcoded static photos array. Update the array to include only gallery-photo-01.jpeg through gallery-photo-27.jpeg. Ensure the Photos tab continues to render both the remaining 27 static photos and any dynamically fetched photos from the backend using the useGetAllPhotos hook. Verify that the grid layout remains responsive and visually consistent."
+          "description": "Add the text 'Teacher, Writer and Social Worker' as a subtitle or descriptor line beneath the founder's name 'Anjani Dwivedi (Kavya)' in the founder section. Style the roles text consistently with the existing About page design using appropriate text styling classes (e.g., text-muted-foreground, italic, or a smaller font size). Ensure no other content in the About page is removed or rearranged."
+        }
+      ]
+    },
+    {
+      "id": "REQ-53",
+      "summary": "Update the founder section on the Home page to include the roles 'Teacher, Writer and Social Worker' as a subtitle beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
+      "acceptanceCriteria": [
+        "The text 'Teacher, Writer and Social Worker' appears in the founder section on the Home page beneath or alongside the founder's name.",
+        "The roles text is styled consistently with the existing founder section design.",
+        "The founder photo, motto text 'मानव सेवा परमो धर्मः', and other existing elements remain unchanged."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Add the text 'Teacher, Writer and Social Worker' as a subtitle or descriptor line beneath the founder's name 'Anjani Dwivedi (Kavya)' in the founder profile section. Style the roles text consistently with the existing founder section design using appropriate text styling classes. Ensure the founder photo, motto text 'मानव सेवा परमो धर्मः', and all other existing elements remain unchanged."
         }
       ]
     }

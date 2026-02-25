@@ -38,7 +38,8 @@ export default function About() {
                   AD
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="mb-2 text-2xl font-bold text-card-foreground">Anjani Dwivedi (Kavya)</h3>
+                  <h3 className="mb-1 text-2xl font-bold text-card-foreground">Anjani Dwivedi (Kavya)</h3>
+                  <p className="mb-1 text-base font-medium italic text-trust">Teacher, Writer and Social Worker</p>
                   <p className="mb-4 text-lg text-muted-foreground">Founder & Visionary</p>
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
                     <div className="flex items-center justify-center gap-2 md:justify-start">

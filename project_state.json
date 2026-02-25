@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 31,
+  "projectStateVersion": 39,
   "summary": "Building a website for a trust/charitable organization",
   "architectural_notes": [
     "Website project for a trust/charitable organization",
@@ -347,6 +347,46 @@
         "REQ-48"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-the-following-line-to-the-payment-section-of-the-donations-page-frontend-src-pages-donations-tsx-after-making-your-donation-please-send-the-transaction-details-to-9651044109-or-email-us-at-manavdeepsevatrust-gmail-com-this-line-should-appear-prominently-within-or-directly-below-the-payment-methods-section-upi-bank-transfer-card-area-so-donors-see-it-after-reviewing-payment-options",
+      "title": "Add the following line to the payment section of the Donations page (frontend/src/pages/Donations.tsx): 'After making your donation, please send the transaction details to 9651044109 or email us at manavdeepsevatrust@gmail.com'. This line should appear prominently within or directly below the payment methods section (UPI/bank transfer/card area) so donors see it after reviewing payment options.",
+      "reqIds": [
+        "REQ-49"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-static-photo-to-the-gallery-page-frontend-src-pages-gallery-tsx-by-appending-gallery-photo-28-jpeg-to-the-hardcoded-static-photos-array-so-that-it-appears-alongside-the-existing-gallery-photo-01-jpeg-through-gallery-photo-27-jpeg-in-the-photo-gallery-section",
+      "title": "Add a new static photo to the Gallery page (frontend/src/pages/Gallery.tsx) by appending 'gallery-photo-28.jpeg' to the hardcoded static photos array, so that it appears alongside the existing gallery-photo-01.jpeg through gallery-photo-27.jpeg in the photo gallery section.",
+      "reqIds": [
+        "REQ-50"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-gallery-photo-28-jpeg-from-the-hardcoded-static-photos-array-in-frontend-src-pages-gallery-tsx-so-that-only-gallery-photo-01-jpeg-through-gallery-photo-27-jpeg-remain-displayed-in-the-photo-gallery-section",
+      "title": "Remove 'gallery-photo-28.jpeg' from the hardcoded static photos array in frontend/src/pages/Gallery.tsx so that only gallery-photo-01.jpeg through gallery-photo-27.jpeg remain displayed in the photo gallery section.",
+      "reqIds": [
+        "REQ-51"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-founder-description-on-the-about-page-frontend-src-pages-about-tsx-to-include-the-roles-teacher-writer-and-social-worker-as-a-subtitle-or-descriptor-line-beneath-the-founder-s-name-anjani-dwivedi-kavya",
+      "title": "Update the founder description on the About page (frontend/src/pages/About.tsx) to include the roles 'Teacher, Writer and Social Worker' as a subtitle or descriptor line beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
+      "reqIds": [
+        "REQ-52"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-to-include-the-roles-teacher-writer-and-social-worker-as-a-subtitle-or-descriptor-beneath-the-founder-s-name-anjani-dwivedi-kavya",
+      "title": "Update the founder section on the Home page (frontend/src/pages/Home.tsx) to include the roles 'Teacher, Writer and Social Worker' as a subtitle or descriptor beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
+      "reqIds": [
+        "REQ-53"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -485,6 +525,30 @@
     {
       "id": "AR-25",
       "summary": "Delete the last 3 photos from the gallery",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Add line 'After making your donation, please send the transaction details to 9651044109 or email us at manavdeepsevatrust@gmail.com' to the payment section on the Donations page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Add a new photo to the gallery",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Delete the last photo (gallery-photo-28.jpeg) from the gallery",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Add roles/titles 'Teacher, Writer and Social Worker' - likely as descriptors for founder Anjani Dwivedi (Kavya) on the About page or homepage founder section",
       "reqIds": [],
       "status": "pending"
     }

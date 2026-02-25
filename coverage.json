@@ -1,24 +1,35 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-24T11:44:18.436Z",
+  "generatedAt": "2026-02-25T00:42:34.635Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-48",
-        "summary": "Remove the last 3 static photos from the Gallery page (frontend/src/pages/Gallery.tsx). The static photos are currently hardcoded as gallery-photo-01.jpeg through gallery-photo-30.jpeg. Remove gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg from the hardcoded static photos array, so that only gallery-photo-01.jpeg through gallery-photo-27.jpeg remain displayed in the photo gallery section.",
+        "id": "REQ-52",
+        "summary": "Update the founder description on the About page (frontend/src/pages/About.tsx) to include the roles 'Teacher, Writer and Social Worker' as a subtitle or descriptor line beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/pages/Gallery.tsx"
+          "frontend/src/pages/About.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/pages/Gallery.tsx"
+          "frontend/src/pages/About.tsx"
+        ]
+      },
+      {
+        "id": "REQ-53",
+        "summary": "Update the founder section on the Home page (frontend/src/pages/Home.tsx) to include the roles 'Teacher, Writer and Social Worker' as a subtitle or descriptor beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Home.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Home.tsx"
         ]
       }
     ]
@@ -28,7 +39,8 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/pages/Gallery.tsx",
+    "frontend/src/pages/About.tsx",
+    "frontend/src/pages/Home.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

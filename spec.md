@@ -1,9 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Remove the last 3 static photos from the Gallery page.
+**Goal:** Add "Teacher, Writer and Social Worker" as a roles descriptor beneath the founder's name on both the About and Home pages.
 
 **Planned changes:**
-- Remove `gallery-photo-28.jpeg`, `gallery-photo-29.jpeg`, and `gallery-photo-30.jpeg` from the hardcoded static photos array in `frontend/src/pages/Gallery.tsx`, leaving only `gallery-photo-01.jpeg` through `gallery-photo-27.jpeg`
+- Add the text "Teacher, Writer and Social Worker" as a subtitle/descriptor beneath "Anjani Dwivedi (Kavya)" on the About page
+- Add the text "Teacher, Writer and Social Worker" as a subtitle/descriptor beneath "Anjani Dwivedi (Kavya)" in the founder section on the Home page
+- Style the roles text consistently with the existing design on each respective page
 
-**User-visible outcome:** The Gallery page photo section displays 27 static photos instead of 30, with the grid layout remaining responsive and visually consistent.
+**User-visible outcome:** Visitors will see the founder's roles — Teacher, Writer and Social Worker — displayed beneath her name on both the Home and About pages.

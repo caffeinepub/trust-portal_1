@@ -65,8 +65,9 @@ export default function Home() {
                 <div className="mb-6">
                   <h2 className="mb-2 text-4xl font-bold text-primary md:text-5xl">मानव सेवा परमो धर्मः</h2>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <h3 className="text-2xl font-semibold text-foreground">Anjani Dwivedi (Kavya)</h3>
+                  <p className="text-base font-medium italic text-trust">Teacher, Writer and Social Worker</p>
                   <p className="text-lg text-muted-foreground">Founder & President</p>
                   <p className="leading-relaxed text-foreground">
                     Guided by the principle that service is the highest duty, our founder has dedicated her life to

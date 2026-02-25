@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-last-3-static-photos-from-the-gallery-page-frontend-src-pages-gallery-tsx-the-static-photos-are-currently-hardcoded-as-gallery-photo-01-jpeg-through-gallery-photo-30-jpeg-remove-gallery-photo-28-jpeg-gallery-photo-29-jpeg-and-gallery-photo-30-jpeg-from-the-hardcoded-static-photos-array-so-that-only-gallery-photo-01-jpeg-through-gallery-photo-27-jpeg-remain-displayed-in-the-photo-gallery-section",
-      "featureTitle": "Remove the last 3 static photos from the Gallery page (frontend/src/pages/Gallery.tsx). The static photos are currently hardcoded as gallery-photo-01.jpeg through gallery-photo-30.jpeg. Remove gallery-photo-28.jpeg, gallery-photo-29.jpeg, and gallery-photo-30.jpeg from the hardcoded static photos array, so that only gallery-photo-01.jpeg through gallery-photo-27.jpeg remain displayed in the photo gallery section.",
+      "featureId": "feature-update-the-founder-description-on-the-about-page-frontend-src-pages-about-tsx-to-include-the-roles-teacher-writer-and-social-worker-as-a-subtitle-or-descriptor-line-beneath-the-founder-s-name-anjani-dwivedi-kavya",
+      "featureTitle": "Update the founder description on the About page (frontend/src/pages/About.tsx) to include the roles 'Teacher, Writer and Social Worker' as a subtitle or descriptor line beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
       "files": [
-        "frontend/src/pages/Gallery.tsx"
+        "frontend/src/pages/About.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,7 +17,27 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-48"
+        "REQ-52"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-to-include-the-roles-teacher-writer-and-social-worker-as-a-subtitle-or-descriptor-beneath-the-founder-s-name-anjani-dwivedi-kavya",
+      "featureTitle": "Update the founder section on the Home page (frontend/src/pages/Home.tsx) to include the roles 'Teacher, Writer and Social Worker' as a subtitle or descriptor beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
+      "files": [
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-53"
       ],
       "confidence": "high"
     }
