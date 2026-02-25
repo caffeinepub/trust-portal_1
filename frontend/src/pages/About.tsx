@@ -19,44 +19,6 @@ const founderBooks = [
   },
 ];
 
-const founderAwards = [
-  {
-    cover: '/assets/WhatsApp Image 2026-02-24 at 4.46.19 PM (3).jpeg',
-    title: 'आचार्य अकादमी प्रमाण-पत्र',
-    subtitle: 'Acharya Academy, Chuliana, Rohtak (Haryana)',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-24 at 4.46.20 PM (3).jpeg',
-    title: 'उत्तर प्रदेश महिला रत्न सम्मान',
-    subtitle: 'Neeraj Smriti Kavya Mahotsav, Jhansi (UP)',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-24 at 4.46.16 PM.jpeg',
-    title: 'मानव दीप सेवा ट्रस्ट उद्घाटन',
-    subtitle: 'Book Release – Vridhaashram, Deoria',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-25 at 11.48.57 AM.jpeg',
-    title: 'विद्या भारती सप्त शक्ति संगम',
-    subtitle: 'Vidya Bharati Akhil Bharatiya Shiksha Sansthan',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.14 AM.jpeg',
-    title: 'एक्सीलेंट कवियत्री अवार्ड',
-    subtitle: 'उत्तर प्रदेश कवियत्री अवार्ड सेरेमनी, लखनऊ 2025',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.15 AM.jpeg',
-    title: 'मातृशक्ति का समाज के नेतृत्व का आह्वान',
-    subtitle: 'Hindustan – Matrishakti Recognition, Deoria',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.16 AM.jpeg',
-    title: 'शिक्षक सम्मान समारोह',
-    subtitle: 'Innerwheel Club of Deoria Srijan – Certificate of Appreciation',
-  },
-];
-
 export default function About() {
   return (
     <div className="flex flex-col">
@@ -139,18 +101,6 @@ export default function About() {
                         src={book.src}
                         alt={book.title}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.classList.add('flex', 'items-center', 'justify-center', 'bg-trust/10');
-                            const placeholder = document.createElement('div');
-                            placeholder.className = 'text-center p-4';
-                            placeholder.innerHTML = `<div class="text-3xl mb-2">📖</div><p class="text-sm text-muted-foreground">${book.title}</p>`;
-                            parent.appendChild(placeholder);
-                          }
-                        }}
                       />
                     </div>
                     <div className="p-3 text-center">
@@ -170,36 +120,112 @@ export default function About() {
                 <h3 className="text-xl font-semibold text-foreground">Awards & Recognition</h3>
               </div>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-6">
-                {founderAwards.map((award, index) => (
-                  <div
-                    key={index}
-                    className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                  >
-                    <div className="relative h-48 w-full overflow-hidden bg-muted">
-                      <img
-                        src={award.cover}
-                        alt={award.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.classList.add('flex', 'items-center', 'justify-center', 'bg-trust/10');
-                            const placeholder = document.createElement('div');
-                            placeholder.className = 'text-center p-4';
-                            placeholder.innerHTML = `<div class="text-3xl mb-2">🏆</div><p class="text-sm text-muted-foreground">${award.title}</p>`;
-                            parent.appendChild(placeholder);
-                          }
-                        }}
-                      />
-                    </div>
-                    <div className="p-3 text-center">
-                      <p className="text-sm font-semibold text-card-foreground leading-tight">{award.title}</p>
-                      <p className="mt-1 text-xs text-muted-foreground leading-tight">{award.subtitle}</p>
-                    </div>
+
+                {/* Award 1 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 11.48.57 AM.jpeg"
+                      alt="आचार्य अकादमी प्रमाण-पत्र"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
                   </div>
-                ))}
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">आचार्य अकादमी प्रमाण-पत्र</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Acharya Academy, Chuliana, Rohtak (Haryana)</p>
+                  </div>
+                </div>
+
+                {/* Award 2 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 11.49.14 AM.jpeg"
+                      alt="उत्तर प्रदेश महिला रत्न सम्मान"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">उत्तर प्रदेश महिला रत्न सम्मान</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Neeraj Smriti Kavya Mahotsav, Jhansi (UP)</p>
+                  </div>
+                </div>
+
+                {/* Award 3 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 11.49.15 AM.jpeg"
+                      alt="मानव दीप सेवा ट्रस्ट उद्घाटन"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">मानव दीप सेवा ट्रस्ट उद्घाटन</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Book Release – Vridhaashram, Deoria</p>
+                  </div>
+                </div>
+
+                {/* Award 4 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 11.49.16 AM.jpeg"
+                      alt="विद्या भारती सप्त शक्ति संगम"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">विद्या भारती सप्त शक्ति संगम</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Vidya Bharati Akhil Bharatiya Shiksha Sansthan</p>
+                  </div>
+                </div>
+
+                {/* Award 5 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 12.45.41 PM (1).jpeg"
+                      alt="एक्सीलेंट कवियत्री अवार्ड"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">एक्सीलेंट कवियत्री अवार्ड</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">उत्तर प्रदेश कवियत्री अवार्ड सेरेमनी, लखनऊ 2025</p>
+                  </div>
+                </div>
+
+                {/* Award 6 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 12.45.41 PM.jpeg"
+                      alt="शिक्षक सम्मान समारोह"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">शिक्षक सम्मान समारोह</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Innerwheel Club of Deoria Srijan – Certificate of Appreciation</p>
+                  </div>
+                </div>
+
+                {/* Award 7 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 12.45.42 PM (1).jpeg"
+                      alt="Acharya Academy Praman Patra"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">Acharya Academy Praman Patra</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Acharya Academy Chuliana, Rohtak – Praman Patra</p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>

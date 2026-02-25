@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T06:35:54.746Z",
+  "generatedAt": "2026-02-25T07:43:13.405Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,8 +11,8 @@
     "implemented": 2,
     "items": [
       {
-        "id": "REQ-73",
-        "summary": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images. Verify the static asset files exist at frontend/public/assets/generated/award-photo-01.jpeg through award-photo-04.jpeg.",
+        "id": "REQ-82",
+        "summary": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Completely rewrite the awards rendering block: remove all dynamic/template-literal src construction, inline event handlers, lazy loading, and conditional rendering. Each <img> must use a fully hardcoded literal src string (e.g. src='/assets/generated/award-photo-01.jpeg'), className='w-full h-48 object-cover rounded-lg', and must be wrapped in a div with className='w-full overflow-hidden rounded-lg bg-gray-100'. Do not reference award-photo-03.jpeg anywhere.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/pages/About.tsx"
@@ -22,8 +22,8 @@
         ]
       },
       {
-        "id": "REQ-74",
-        "summary": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images.",
+        "id": "REQ-83",
+        "summary": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Completely rewrite the awards rendering block: remove all dynamic/template-literal src construction, inline event handlers, lazy loading, and conditional rendering. Each <img> must use a fully hardcoded literal src string (e.g. src='/assets/generated/award-photo-01.jpeg'), className='w-full h-48 object-cover rounded-lg', and must be wrapped in a div with className='w-full overflow-hidden rounded-lg bg-gray-100'. Do not reference award-photo-03.jpeg anywhere. All other founder section content (profile photo, name, roles, motto, Books by Our Founder) must remain intact.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/pages/Home.tsx"

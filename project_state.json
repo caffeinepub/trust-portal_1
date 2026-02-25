@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 57,
+  "projectStateVersion": 65,
   "summary": "Building a website for a trust/charitable organization",
   "architectural_notes": [
     "Website project for a trust/charitable organization",
@@ -8,7 +8,7 @@
   ],
   "known_issues": [
     "Founder photo on homepage has head being cut off - needs object-position adjustment",
-    "Award photos in the Awards & Recognition section are not displaying properly"
+    "Award photos not displaying in Awards & Recognition section on About and/or Home page"
   ],
   "isFixRequest": true,
   "existing_features": [
@@ -523,6 +523,70 @@
         "REQ-74"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-awards-recognition-section-on-the-about-page-frontend-src-pages-about-tsx-to-1-remove-award-photo-03-jpeg-the-newspaper-clipping-from-the-awards-array-and-2-add-the-4-new-award-photos-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-award-photo-08-jpeg-to-the-awards-grid-the-updated-section-should-display-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-and-award-photo-08-jpeg-in-a-responsive-grid-layout-with-object-fit-cover-and-caption-labels",
+      "title": "Update the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) to: (1) remove award-photo-03.jpeg (the मातृशक्ति newspaper clipping) from the awards array, and (2) add the 4 new award photos (award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) to the awards grid. The updated section should display award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, and award-photo-08.jpeg in a responsive grid layout with object-fit: cover and caption labels.",
+      "reqIds": [
+        "REQ-76"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-awards-recognition-sub-section-on-the-home-page-frontend-src-pages-home-tsx-to-1-remove-award-photo-03-jpeg-the-newspaper-clipping-from-the-awards-array-and-2-add-the-4-new-award-photos-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-award-photo-08-jpeg-to-the-awards-display-the-updated-section-should-display-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-and-award-photo-08-jpeg-in-a-responsive-grid-or-horizontal-scrollable-layout-with-object-fit-cover-and-captions",
+      "title": "Update the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) to: (1) remove award-photo-03.jpeg (the मातृशक्ति newspaper clipping) from the awards array, and (2) add the 4 new award photos (award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) to the awards display. The updated section should display award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, and award-photo-08.jpeg in a responsive grid or horizontal scrollable layout with object-fit: cover and captions.",
+      "reqIds": [
+        "REQ-77"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-awards-recognition-section-on-the-about-page-frontend-src-pages-about-tsx-so-that-all-7-award-photos-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-through-award-photo-08-jpeg-render-visibly-and-correctly-ensure-each-img-tag-uses-a-src-path-starting-with-assets-generated-has-correct-alt-text-an-explicit-container-size-e-g-w-full-h-48-or-similar-object-fit-cover-and-no-css-rules-that-hide-or-zero-size-the-images-remove-any-broken-references-verify-the-static-asset-files-are-present-at-frontend-public-assets-generated",
+      "title": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg through award-photo-08.jpeg) render visibly and correctly. Ensure each <img> tag uses a src path starting with '/assets/generated/', has correct alt text, an explicit container size (e.g. w-full h-48 or similar), object-fit: cover, and no CSS rules that hide or zero-size the images. Remove any broken references. Verify the static asset files are present at frontend/public/assets/generated/.",
+      "reqIds": [
+        "REQ-78"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-awards-recognition-sub-section-on-the-home-page-frontend-src-pages-home-tsx-so-that-all-7-award-photos-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-through-award-photo-08-jpeg-render-visibly-and-correctly-ensure-each-img-tag-uses-a-src-path-starting-with-assets-generated-has-correct-alt-text-an-explicit-container-size-object-fit-cover-and-no-css-rules-that-hide-or-zero-size-the-images-remove-any-broken-references",
+      "title": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg through award-photo-08.jpeg) render visibly and correctly. Ensure each <img> tag uses a src path starting with '/assets/generated/', has correct alt text, an explicit container size, object-fit: cover, and no CSS rules that hide or zero-size the images. Remove any broken references.",
+      "reqIds": [
+        "REQ-79"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-awards-recognition-section-on-the-about-page-frontend-src-pages-about-tsx-so-that-all-7-award-photos-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-award-photo-08-jpeg-render-visibly-rewrite-the-awards-array-and-image-rendering-from-scratch-hardcode-each-img-src-as-assets-generated-award-photo-xx-jpeg-no-template-literals-no-dynamic-construction-set-classname-w-full-h-48-object-cover-directly-on-each-img-tag-wrap-each-in-a-div-with-explicit-dimensions-e-g-classname-w-full-overflow-hidden-rounded-lg-and-remove-any-conditional-rendering-lazy-loading-or-css-that-could-zero-size-or-hide-images-do-not-reference-award-photo-03-jpeg",
+      "title": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Rewrite the awards array and image rendering from scratch: hardcode each img src as '/assets/generated/award-photo-XX.jpeg' (no template literals, no dynamic construction), set className='w-full h-48 object-cover' directly on each img tag, wrap each in a div with explicit dimensions (e.g. className='w-full overflow-hidden rounded-lg'), and remove any conditional rendering, lazy loading, or CSS that could zero-size or hide images. Do not reference award-photo-03.jpeg.",
+      "reqIds": [
+        "REQ-80"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-awards-recognition-sub-section-on-the-home-page-frontend-src-pages-home-tsx-so-that-all-7-award-photos-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-award-photo-08-jpeg-render-visibly-rewrite-the-awards-array-and-image-rendering-from-scratch-hardcode-each-img-src-as-assets-generated-award-photo-xx-jpeg-no-template-literals-no-dynamic-construction-set-classname-w-full-h-48-object-cover-directly-on-each-img-tag-wrap-each-in-a-div-with-explicit-dimensions-and-remove-any-conditional-rendering-lazy-loading-or-css-that-could-zero-size-or-hide-images-do-not-reference-award-photo-03-jpeg-all-other-founder-section-content-profile-photo-name-roles-motto-books-by-our-founder-must-remain-intact",
+      "title": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Rewrite the awards array and image rendering from scratch: hardcode each img src as '/assets/generated/award-photo-XX.jpeg' (no template literals, no dynamic construction), set className='w-full h-48 object-cover' directly on each img tag, wrap each in a div with explicit dimensions, and remove any conditional rendering, lazy loading, or CSS that could zero-size or hide images. Do not reference award-photo-03.jpeg. All other founder section content (profile photo, name, roles, motto, Books by Our Founder) must remain intact.",
+      "reqIds": [
+        "REQ-81"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-awards-recognition-section-on-the-about-page-frontend-src-pages-about-tsx-so-that-all-7-award-photos-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-award-photo-08-jpeg-render-visibly-completely-rewrite-the-awards-rendering-block-remove-all-dynamic-template-literal-src-construction-inline-event-handlers-lazy-loading-and-conditional-rendering-each-img-must-use-a-fully-hardcoded-literal-src-string-e-g-src-assets-generated-award-photo-01-jpeg-classname-w-full-h-48-object-cover-rounded-lg-and-must-be-wrapped-in-a-div-with-classname-w-full-overflow-hidden-rounded-lg-bg-gray-100-do-not-reference-award-photo-03-jpeg-anywhere",
+      "title": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Completely rewrite the awards rendering block: remove all dynamic/template-literal src construction, inline event handlers, lazy loading, and conditional rendering. Each <img> must use a fully hardcoded literal src string (e.g. src='/assets/generated/award-photo-01.jpeg'), className='w-full h-48 object-cover rounded-lg', and must be wrapped in a div with className='w-full overflow-hidden rounded-lg bg-gray-100'. Do not reference award-photo-03.jpeg anywhere.",
+      "reqIds": [
+        "REQ-82"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-awards-recognition-sub-section-on-the-home-page-frontend-src-pages-home-tsx-so-that-all-7-award-photos-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-award-photo-08-jpeg-render-visibly-completely-rewrite-the-awards-rendering-block-remove-all-dynamic-template-literal-src-construction-inline-event-handlers-lazy-loading-and-conditional-rendering-each-img-must-use-a-fully-hardcoded-literal-src-string-e-g-src-assets-generated-award-photo-01-jpeg-classname-w-full-h-48-object-cover-rounded-lg-and-must-be-wrapped-in-a-div-with-classname-w-full-overflow-hidden-rounded-lg-bg-gray-100-do-not-reference-award-photo-03-jpeg-anywhere-all-other-founder-section-content-profile-photo-name-roles-motto-books-by-our-founder-must-remain-intact",
+      "title": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Completely rewrite the awards rendering block: remove all dynamic/template-literal src construction, inline event handlers, lazy loading, and conditional rendering. Each <img> must use a fully hardcoded literal src string (e.g. src='/assets/generated/award-photo-01.jpeg'), className='w-full h-48 object-cover rounded-lg', and must be wrapped in a div with className='w-full overflow-hidden rounded-lg bg-gray-100'. Do not reference award-photo-03.jpeg anywhere. All other founder section content (profile photo, name, roles, motto, Books by Our Founder) must remain intact.",
+      "reqIds": [
+        "REQ-83"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -747,6 +811,20 @@
       "summary": "Store the 4 uploaded award photos as static assets in frontend/public/assets/generated/ with the following filenames: award-photo-01.jpeg (ceremony with women receiving plaque - Vidya Bharati event), award-photo-02.jpeg (round award trophy - Uttar Pradesh Kaviyatri Award, Anjani Dwivedi 'Kavya'), award-photo-03.jpeg (newspaper clipping - Matrishakti recognition article), award-photo-04.jpeg (Innerwheel Club of Deoria Srijan certificate ceremony).",
       "reqIds": [
         "REQ-70"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-40",
+      "summary": "Add new photos to the Awards & Recognition section and delete the award photo 'मातृशक्ति का समाज के नेतृत्व का आह्वान' (award-photo-03.jpeg newspaper clipping)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-41",
+      "summary": "Store the 4 newly uploaded award photos as static assets in frontend/public/assets/generated/ with the following filenames: 'WhatsApp Image 2026-02-25 at 12.45.42 PM (1).jpeg' → award-photo-05.jpeg (certificate presentation ceremony with plaque), 'WhatsApp Image 2026-02-25 at 12.45.42 PM.jpeg' → award-photo-06.jpeg (bouquet presentation ceremony on stage), 'WhatsApp Image 2026-02-25 at 12.45.41 PM (1).jpeg' → award-photo-07.jpeg (newspaper clipping - Acharya Academy first place award), 'WhatsApp Image 2026-02-25 at 12.45.41 PM.jpeg' → award-photo-08.jpeg (Acharya Academy Chuliana Rohtak certificate/praman-patra).",
+      "reqIds": [
+        "REQ-75"
       ],
       "status": "pending"
     }

@@ -1,59 +1,63 @@
 {
   "kind": "build_request",
-  "title": "Fix award photos not displaying in Awards & Recognition section",
+  "title": "Fix Awards & Recognition photos not displaying on About and Home pages",
   "projectName": "Manavdeep Seva Trust",
   "priority": "high",
   "requirements": [
     {
-      "id": "REQ-73",
-      "text": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images. Verify the static asset files exist at frontend/public/assets/generated/award-photo-01.jpeg through award-photo-04.jpeg.",
+      "id": "REQ-82",
+      "text": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Completely rewrite the awards rendering block: remove all dynamic/template-literal src construction, inline event handlers, lazy loading, and conditional rendering. Each <img> must use a fully hardcoded literal src string (e.g. src='/assets/generated/award-photo-01.jpeg'), className='w-full h-48 object-cover rounded-lg', and must be wrapped in a div with className='w-full overflow-hidden rounded-lg bg-gray-100'. Do not reference award-photo-03.jpeg anywhere.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-1"
         ],
         "quotes": [
-          "photos show nhi ho rahe hai"
+          "फोटोज नही दिख रहे है अभी Awards & Recognition में"
         ]
       },
       "acceptanceCriteria": [
-        "All 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) are visible on the About page in the Awards & Recognition section",
-        "Each image src attribute is set to '/assets/generated/award-photo-XX.jpeg' (absolute path from public root)",
-        "Each image has a defined container height and object-fit: cover so images are not zero-sized",
-        "No CSS rule sets display:none, visibility:hidden, or height:0 on the award photo elements",
-        "Images load without 404 errors in the browser network tab"
+        "All 7 award photos (award-photo-01, 02, 04, 05, 06, 07, 08) are visible on the About page Awards & Recognition section",
+        "Each img tag has a hardcoded literal src path '/assets/generated/award-photo-XX.jpeg' with no template literals",
+        "Each img tag has className='w-full h-48 object-cover rounded-lg' applied directly",
+        "No reference to award-photo-03.jpeg exists in the component",
+        "No conditional rendering, lazy loading, or intersection observer hides any award image",
+        "All other content on the About page (founder profile, books section) remains intact"
       ]
     },
     {
-      "id": "REQ-74",
-      "text": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images.",
+      "id": "REQ-83",
+      "text": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Completely rewrite the awards rendering block: remove all dynamic/template-literal src construction, inline event handlers, lazy loading, and conditional rendering. Each <img> must use a fully hardcoded literal src string (e.g. src='/assets/generated/award-photo-01.jpeg'), className='w-full h-48 object-cover rounded-lg', and must be wrapped in a div with className='w-full overflow-hidden rounded-lg bg-gray-100'. Do not reference award-photo-03.jpeg anywhere. All other founder section content (profile photo, name, roles, motto, Books by Our Founder) must remain intact.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-1"
         ],
         "quotes": [
-          "photos show nhi ho rahe hai"
+          "फोटोज नही दिख रहे है अभी Awards & Recognition में"
         ]
       },
       "acceptanceCriteria": [
-        "All 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) are visible on the Home page in the Awards & Recognition sub-section",
-        "Each image src attribute is set to '/assets/generated/award-photo-XX.jpeg' (absolute path from public root)",
-        "Each image has a defined container height and object-fit: cover so images are not zero-sized",
-        "No CSS rule sets display:none, visibility:hidden, or height:0 on the award photo elements",
-        "Images load without 404 errors in the browser network tab"
+        "All 7 award photos (award-photo-01, 02, 04, 05, 06, 07, 08) are visible on the Home page Awards & Recognition sub-section",
+        "Each img tag has a hardcoded literal src path '/assets/generated/award-photo-XX.jpeg' with no template literals",
+        "Each img tag has className='w-full h-48 object-cover rounded-lg' applied directly",
+        "No reference to award-photo-03.jpeg exists in the component",
+        "No conditional rendering, lazy loading, or intersection observer hides any award image",
+        "Founder profile photo, name, roles, motto text, and Books by Our Founder section all remain intact"
       ]
     }
   ],
   "constraints": [
-    "Do not remove or alter any other sections on the About or Home pages",
-    "Do not modify files listed under frontend.immutablePaths",
-    "Static award photo assets must be served from frontend/public/assets/generated/ — do not route through the backend"
+    "Do not reference award-photo-03.jpeg in any component",
+    "Do not alter any other sections of About.tsx or Home.tsx outside the awards rendering block",
+    "Use only hardcoded literal src strings for award image paths — no template literals or dynamic construction",
+    "Do not modify any files listed in frontend.immutablePaths"
   ],
   "nonGoals": [
-    "Adding new award photos beyond the existing 4",
-    "Changing the layout or design of the Awards & Recognition section",
-    "Modifying any other page or component"
+    "Adding new award photos beyond the current 7",
+    "Changing the layout or design of other page sections",
+    "Backend changes",
+    "Gallery page changes"
   ],
   "imageRequirements": {
     "required": [],

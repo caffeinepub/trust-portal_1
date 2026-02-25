@@ -20,44 +20,6 @@ const founderBooks = [
   },
 ];
 
-const founderAwards = [
-  {
-    cover: '/assets/WhatsApp Image 2026-02-24 at 4.46.19 PM (3).jpeg',
-    title: 'आचार्य अकादमी प्रमाण-पत्र',
-    subtitle: 'Acharya Academy, Chuliana, Rohtak (Haryana)',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-24 at 4.46.20 PM (3).jpeg',
-    title: 'उत्तर प्रदेश महिला रत्न सम्मान',
-    subtitle: 'Neeraj Smriti Kavya Mahotsav, Jhansi (UP)',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-24 at 4.46.16 PM.jpeg',
-    title: 'मानव दीप सेवा ट्रस्ट उद्घाटन',
-    subtitle: 'Book Release – Vridhaashram, Deoria',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-25 at 11.48.57 AM.jpeg',
-    title: 'विद्या भारती सप्त शक्ति संगम',
-    subtitle: 'Vidya Bharati Akhil Bharatiya Shiksha Sansthan',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.14 AM.jpeg',
-    title: 'एक्सीलेंट कवियत्री अवार्ड',
-    subtitle: 'उत्तर प्रदेश कवियत्री अवार्ड सेरेमनी, लखनऊ 2025',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.15 AM.jpeg',
-    title: 'मातृशक्ति का समाज के नेतृत्व का आह्वान',
-    subtitle: 'Hindustan – Matrishakti Recognition, Deoria',
-  },
-  {
-    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.16 AM.jpeg',
-    title: 'शिक्षक सम्मान समारोह',
-    subtitle: 'Innerwheel Club of Deoria Srijan – Certificate of Appreciation',
-  },
-];
-
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -76,7 +38,7 @@ export default function Home() {
               Building a Better Tomorrow, Together
             </h1>
             <p className="mb-8 text-lg text-muted-foreground md:text-xl">
-              GreenStripe Trust is dedicated to creating lasting positive change through community-driven initiatives,
+              Manavdeep Seva Trust is dedicated to creating lasting positive change through community-driven initiatives,
               sustainable development, and compassionate service.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -101,50 +63,40 @@ export default function Home() {
       {/* Founder Section */}
       <section className="border-y border-border/40 bg-gradient-to-br from-trust/5 via-background to-nature/5 py-16">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-5xl">
-            {/* Founder Profile */}
-            <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
-              {/* Founder Photo */}
-              <div className="flex-shrink-0">
-                <div className="relative">
-                  <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-trust/20 to-nature/20 blur-xl"></div>
-                  <img
-                    src="/assets/generated/founder-anjani.dim_400x500.jpeg"
-                    alt="Anjani Dwivedi - Founder"
-                    width={256}
-                    height={256}
-                    className="relative h-64 w-64 rounded-full border-4 border-background object-cover object-top shadow-2xl"
-                  />
-                </div>
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-8 flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-trust/10">
+                <Heart className="h-6 w-6 text-trust" />
               </div>
+              <h2 className="text-3xl font-bold text-primary">Our Founder</h2>
+            </div>
 
-              {/* Founder Info */}
-              <div className="flex-1 text-center md:text-left">
-                <div className="mb-6">
-                  <h2 className="mb-2 text-4xl font-bold text-primary md:text-5xl">मानव सेवा परमो धर्मः</h2>
+            {/* Founder Profile */}
+            <div className="rounded-xl border border-border/60 bg-card p-6 shadow-sm md:p-8">
+              <div className="flex flex-col gap-6 md:flex-row md:gap-8">
+                <div className="flex-shrink-0 text-center">
+                  <div className="relative inline-block">
+                    <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-trust/20 to-primary/20 blur-lg"></div>
+                    <img
+                      src="/assets/generated/founder-anjani.dim_400x500.jpeg"
+                      alt="Anjani Dwivedi"
+                      className="relative h-48 w-48 rounded-full border-4 border-background object-cover object-top shadow-xl"
+                    />
+                  </div>
                 </div>
-                <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-foreground">Anjani Dwivedi (Kavya)</h3>
-                  <p className="text-base font-medium italic text-trust">Teacher, Writer and Social Worker</p>
-                  <p className="text-muted-foreground">Founder & President, Manavdeep Seva Trust</p>
+                <div className="flex-1">
+                  <h3 className="mb-1 text-2xl font-bold text-foreground">Anjani Dwivedi (Kavya)</h3>
+                  <p className="mb-1 text-base font-medium italic text-trust">Teacher, Writer and Social Worker</p>
+                  <p className="mb-4 text-muted-foreground">Founder & President, Manavdeep Seva Trust</p>
+                  <blockquote className="border-l-4 border-trust/40 pl-4 italic text-muted-foreground">
+                    "मानव सेवा परमो धर्मः — Service to humanity is the highest duty."
+                  </blockquote>
                 </div>
-                <p className="mb-6 leading-relaxed text-foreground">
-                  With a deep commitment to social welfare and community development, Anjani Dwivedi founded
-                  Manavdeep Seva Trust to serve the underprivileged and create sustainable change. Her work spans
-                  education, women empowerment, elder care, and environmental conservation.
-                </p>
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-trust hover:text-trust/80 transition-colors"
-                >
-                  Learn more about our founder
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
               </div>
             </div>
 
             {/* Books by Our Founder */}
-            <div className="mt-12">
+            <div className="mt-10">
               <div className="mb-6 flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
                   <BookOpen className="h-5 w-5 text-primary" />
@@ -162,18 +114,6 @@ export default function Home() {
                         src={book.src}
                         alt={book.title}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.classList.add('flex', 'items-center', 'justify-center', 'bg-trust/10');
-                            const placeholder = document.createElement('div');
-                            placeholder.className = 'text-center p-4';
-                            placeholder.innerHTML = `<div class="text-3xl mb-2">📖</div><p class="text-sm text-muted-foreground">${book.title}</p>`;
-                            parent.appendChild(placeholder);
-                          }
-                        }}
                       />
                     </div>
                     <div className="p-3 text-center">
@@ -185,7 +125,7 @@ export default function Home() {
             </div>
 
             {/* Awards & Recognition */}
-            <div className="mt-12">
+            <div className="mt-10">
               <div className="mb-6 flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
                   <Award className="h-5 w-5 text-primary" />
@@ -193,125 +133,182 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-foreground">Awards & Recognition</h3>
               </div>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-6">
-                {founderAwards.map((award, index) => (
-                  <div
-                    key={index}
-                    className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                  >
-                    <div className="relative h-48 w-full overflow-hidden bg-muted">
-                      <img
-                        src={award.cover}
-                        alt={award.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.classList.add('flex', 'items-center', 'justify-center', 'bg-trust/10');
-                            const placeholder = document.createElement('div');
-                            placeholder.className = 'text-center p-4';
-                            placeholder.innerHTML = `<div class="text-3xl mb-2">🏆</div><p class="text-sm text-muted-foreground">${award.title}</p>`;
-                            parent.appendChild(placeholder);
-                          }
-                        }}
-                      />
-                    </div>
-                    <div className="p-3 text-center">
-                      <p className="text-sm font-semibold text-card-foreground leading-tight">{award.title}</p>
-                      <p className="mt-1 text-xs text-muted-foreground leading-tight">{award.subtitle}</p>
-                    </div>
+
+                {/* Award 1 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 11.48.57 AM.jpeg"
+                      alt="आचार्य अकादमी प्रमाण-पत्र"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
                   </div>
-                ))}
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">आचार्य अकादमी प्रमाण-पत्र</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Acharya Academy, Chuliana, Rohtak (Haryana)</p>
+                  </div>
+                </div>
+
+                {/* Award 2 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 11.49.14 AM.jpeg"
+                      alt="उत्तर प्रदेश महिला रत्न सम्मान"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">उत्तर प्रदेश महिला रत्न सम्मान</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Neeraj Smriti Kavya Mahotsav, Jhansi (UP)</p>
+                  </div>
+                </div>
+
+                {/* Award 3 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 11.49.15 AM.jpeg"
+                      alt="मानव दीप सेवा ट्रस्ट उद्घाटन"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">मानव दीप सेवा ट्रस्ट उद्घाटन</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Book Release – Vridhaashram, Deoria</p>
+                  </div>
+                </div>
+
+                {/* Award 4 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 11.49.16 AM.jpeg"
+                      alt="विद्या भारती सप्त शक्ति संगम"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">विद्या भारती सप्त शक्ति संगम</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Vidya Bharati Akhil Bharatiya Shiksha Sansthan</p>
+                  </div>
+                </div>
+
+                {/* Award 5 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 12.45.41 PM (1).jpeg"
+                      alt="एक्सीलेंट कवियत्री अवार्ड"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">एक्सीलेंट कवियत्री अवार्ड</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">उत्तर प्रदेश कवियत्री अवार्ड सेरेमनी, लखनऊ 2025</p>
+                  </div>
+                </div>
+
+                {/* Award 6 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 12.45.41 PM.jpeg"
+                      alt="शिक्षक सम्मान समारोह"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">शिक्षक सम्मान समारोह</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Innerwheel Club of Deoria Srijan – Certificate of Appreciation</p>
+                  </div>
+                </div>
+
+                {/* Award 7 */}
+                <div className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                    <img
+                      src="/assets/WhatsApp Image 2026-02-25 at 12.45.42 PM (1).jpeg"
+                      alt="Acharya Academy Praman Patra"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="text-sm font-semibold text-card-foreground leading-tight">Acharya Academy Praman Patra</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-tight">Acharya Academy Chuliana, Rohtak – Praman Patra</p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="border-b border-border/40 bg-primary/5 py-16">
+      {/* Mission Section */}
+      <section className="border-b border-border/40 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold text-primary md:text-4xl">Our Mission</h2>
-            <p className="mb-4 text-lg leading-relaxed text-foreground">
-              Manavdeep Seva Trust is committed to the holistic development of society through education, healthcare,
-              women empowerment, elder care, and environmental conservation.
-            </p>
-            <p className="text-muted-foreground">
-              We believe in the power of community and the strength of collective action to create a more just and
-              compassionate world.
+            <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
+              To empower communities through education, healthcare, women empowerment, elder care, and environmental
+              conservation — building a society rooted in compassion, dignity, and sustainable progress.
             </p>
           </div>
         </div>
       </section>
 
       {/* Key Highlights */}
-      <section className="border-b border-border/40 py-16">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-5xl">
-            <h2 className="mb-12 text-center text-3xl font-bold text-primary">Our Impact</h2>
-            <div className="grid gap-8 md:grid-cols-3">
-              <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
-                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-trust/10">
-                  <Heart className="h-7 w-7 text-trust" />
-                </div>
-                <h3 className="mb-2 text-3xl font-bold text-primary">500+</h3>
-                <p className="text-sm font-medium text-card-foreground">Families Supported</p>
-                <p className="mt-2 text-xs text-muted-foreground">
-                  Providing essential support and resources to families in need across Uttar Pradesh.
-                </p>
+          <h2 className="mb-12 text-center text-3xl font-bold text-primary">Our Impact</h2>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
+              <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-trust/10">
+                <Heart className="h-7 w-7 text-trust" />
               </div>
-
-              <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
-                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                  <Users className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="mb-2 text-3xl font-bold text-primary">1000+</h3>
-                <p className="text-sm font-medium text-card-foreground">Students Educated</p>
-                <p className="mt-2 text-xs text-muted-foreground">
-                  Empowering the next generation through quality education and skill development programs.
-                </p>
+              <h3 className="mb-2 text-2xl font-bold text-foreground">5000+</h3>
+              <p className="text-muted-foreground">Lives Touched</p>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
+              <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                <Users className="h-7 w-7 text-primary" />
               </div>
-
-              <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
-                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-nature/10">
-                  <Leaf className="h-7 w-7 text-nature" />
-                </div>
-                <h3 className="mb-2 text-3xl font-bold text-primary">200+</h3>
-                <p className="text-sm font-medium text-card-foreground">Trees Planted</p>
-                <p className="mt-2 text-xs text-muted-foreground">
-                  Contributing to environmental conservation and a greener future for our communities.
-                </p>
+              <h3 className="mb-2 text-2xl font-bold text-foreground">200+</h3>
+              <p className="text-muted-foreground">Volunteers</p>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
+              <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-nature/10">
+                <Leaf className="h-7 w-7 text-nature" />
               </div>
+              <h3 className="mb-2 text-2xl font-bold text-foreground">50+</h3>
+              <p className="text-muted-foreground">Programs Completed</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16">
+      <section className="bg-gradient-to-br from-primary/10 via-background to-trust/10 py-16">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-4 text-3xl font-bold text-primary md:text-4xl">Join Us in Making a Difference</h2>
-            <p className="mb-8 text-lg text-muted-foreground">
-              Your support can transform lives. Whether through donations, volunteering, or spreading awareness, every
-              contribution matters.
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="mb-4 text-3xl font-bold text-primary">Join Us in Making a Difference</h2>
+            <p className="mb-8 text-muted-foreground">
+              Your support helps us continue our mission of serving the underprivileged and creating lasting change.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link
                 to="/donations"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
-                <Heart className="h-4 w-4" />
                 Donate Now
+                <Heart className="h-4 w-4" />
               </Link>
               <Link
-                to="/contact"
+                to="/about"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-8 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
               >
-                Contact Us
-                <ArrowRight className="h-4 w-4" />
+                Learn More
               </Link>
             </div>
           </div>

@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-fix-the-awards-recognition-section-on-the-about-page-frontend-src-pages-about-tsx-so-that-all-4-award-photos-award-photo-01-jpeg-through-award-photo-04-jpeg-render-visibly-and-correctly-ensure-each-img-tag-has-a-valid-src-path-starting-with-assets-generated-correct-alt-text-an-explicit-container-size-with-object-fit-cover-and-no-css-rules-that-hide-or-zero-size-the-images-verify-the-static-asset-files-exist-at-frontend-public-assets-generated-award-photo-01-jpeg-through-award-photo-04-jpeg",
-      "featureTitle": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images. Verify the static asset files exist at frontend/public/assets/generated/award-photo-01.jpeg through award-photo-04.jpeg.",
+      "featureId": "feature-fix-the-awards-recognition-section-on-the-about-page-frontend-src-pages-about-tsx-so-that-all-7-award-photos-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-award-photo-08-jpeg-render-visibly-completely-rewrite-the-awards-rendering-block-remove-all-dynamic-template-literal-src-construction-inline-event-handlers-lazy-loading-and-conditional-rendering-each-img-must-use-a-fully-hardcoded-literal-src-string-e-g-src-assets-generated-award-photo-01-jpeg-classname-w-full-h-48-object-cover-rounded-lg-and-must-be-wrapped-in-a-div-with-classname-w-full-overflow-hidden-rounded-lg-bg-gray-100-do-not-reference-award-photo-03-jpeg-anywhere",
+      "featureTitle": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Completely rewrite the awards rendering block: remove all dynamic/template-literal src construction, inline event handlers, lazy loading, and conditional rendering. Each <img> must use a fully hardcoded literal src string (e.g. src='/assets/generated/award-photo-01.jpeg'), className='w-full h-48 object-cover rounded-lg', and must be wrapped in a div with className='w-full overflow-hidden rounded-lg bg-gray-100'. Do not reference award-photo-03.jpeg anywhere.",
       "files": [
         "frontend/src/pages/About.tsx"
       ],
@@ -17,13 +17,13 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-73"
+        "REQ-82"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-fix-the-awards-recognition-sub-section-on-the-home-page-frontend-src-pages-home-tsx-so-that-all-4-award-photos-award-photo-01-jpeg-through-award-photo-04-jpeg-render-visibly-and-correctly-ensure-each-img-tag-has-a-valid-src-path-starting-with-assets-generated-correct-alt-text-an-explicit-container-size-with-object-fit-cover-and-no-css-rules-that-hide-or-zero-size-the-images",
-      "featureTitle": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images.",
+      "featureId": "feature-fix-the-awards-recognition-sub-section-on-the-home-page-frontend-src-pages-home-tsx-so-that-all-7-award-photos-award-photo-01-jpeg-award-photo-02-jpeg-award-photo-04-jpeg-award-photo-05-jpeg-award-photo-06-jpeg-award-photo-07-jpeg-award-photo-08-jpeg-render-visibly-completely-rewrite-the-awards-rendering-block-remove-all-dynamic-template-literal-src-construction-inline-event-handlers-lazy-loading-and-conditional-rendering-each-img-must-use-a-fully-hardcoded-literal-src-string-e-g-src-assets-generated-award-photo-01-jpeg-classname-w-full-h-48-object-cover-rounded-lg-and-must-be-wrapped-in-a-div-with-classname-w-full-overflow-hidden-rounded-lg-bg-gray-100-do-not-reference-award-photo-03-jpeg-anywhere-all-other-founder-section-content-profile-photo-name-roles-motto-books-by-our-founder-must-remain-intact",
+      "featureTitle": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 7 award photos (award-photo-01.jpeg, award-photo-02.jpeg, award-photo-04.jpeg, award-photo-05.jpeg, award-photo-06.jpeg, award-photo-07.jpeg, award-photo-08.jpeg) render visibly. Completely rewrite the awards rendering block: remove all dynamic/template-literal src construction, inline event handlers, lazy loading, and conditional rendering. Each <img> must use a fully hardcoded literal src string (e.g. src='/assets/generated/award-photo-01.jpeg'), className='w-full h-48 object-cover rounded-lg', and must be wrapped in a div with className='w-full overflow-hidden rounded-lg bg-gray-100'. Do not reference award-photo-03.jpeg anywhere. All other founder section content (profile photo, name, roles, motto, Books by Our Founder) must remain intact.",
       "files": [
         "frontend/src/pages/Home.tsx"
       ],
@@ -37,7 +37,7 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-74"
+        "REQ-83"
       ],
       "confidence": "high"
     }
