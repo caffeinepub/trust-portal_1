@@ -1,40 +1,59 @@
 {
   "kind": "build_request",
-  "title": "Revert book cover photos to original versions",
+  "title": "Fix award photos not displaying in Awards & Recognition section",
   "projectName": "Manavdeep Seva Trust",
   "priority": "high",
   "requirements": [
     {
-      "id": "REQ-69",
-      "text": "Restore the original book cover static assets in frontend/public/assets/generated/ by reverting book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg, and book-cover-04.jpeg to the versions that existed before Version 25 replaced them. The correct originals are the user-uploaded BOOK (1).jpeg through BOOK (4).jpeg files: book-cover-01.jpeg = गंगा की वाणी, book-cover-02.jpeg = मन के मोती, book-cover-03.jpeg = श्री कृष्ण दर्शन, book-cover-04.jpeg = वृद्धाश्रम. Do not alter the image content — only restore the original uploaded files.",
+      "id": "REQ-73",
+      "text": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images. Verify the static asset files exist at frontend/public/assets/generated/award-photo-01.jpeg through award-photo-04.jpeg.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-1"
         ],
         "quotes": [
-          "GIVE THE ORIGINAL BOOK COVERS DONT CHANGE THE COVER PHOTOS"
+          "photos show nhi ho rahe hai"
         ]
       },
       "acceptanceCriteria": [
-        "book-cover-01.jpeg in frontend/public/assets/generated/ matches the original BOOK (1).jpeg (गंगा की वाणी) uploaded by the user",
-        "book-cover-02.jpeg in frontend/public/assets/generated/ matches the original BOOK (2).jpeg (मन के मोती) uploaded by the user",
-        "book-cover-03.jpeg in frontend/public/assets/generated/ matches the original BOOK (3).jpeg (श्री कृष्ण दर्शन) uploaded by the user",
-        "book-cover-04.jpeg in frontend/public/assets/generated/ matches the original BOOK (4).jpeg (वृद्धाश्रम) uploaded by the user",
-        "The 'Books by Our Founder' section on Home page and About page display the correct original cover images without any AI-generated replacements",
-        "No other files or UI code are modified"
+        "All 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) are visible on the About page in the Awards & Recognition section",
+        "Each image src attribute is set to '/assets/generated/award-photo-XX.jpeg' (absolute path from public root)",
+        "Each image has a defined container height and object-fit: cover so images are not zero-sized",
+        "No CSS rule sets display:none, visibility:hidden, or height:0 on the award photo elements",
+        "Images load without 404 errors in the browser network tab"
+      ]
+    },
+    {
+      "id": "REQ-74",
+      "text": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "photos show nhi ho rahe hai"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) are visible on the Home page in the Awards & Recognition sub-section",
+        "Each image src attribute is set to '/assets/generated/award-photo-XX.jpeg' (absolute path from public root)",
+        "Each image has a defined container height and object-fit: cover so images are not zero-sized",
+        "No CSS rule sets display:none, visibility:hidden, or height:0 on the award photo elements",
+        "Images load without 404 errors in the browser network tab"
       ]
     }
   ],
   "constraints": [
-    "Do not alter any book titles or labels in Home.tsx or About.tsx",
-    "Do not modify any other static assets or page content",
-    "Only the image file content of book-cover-01.jpeg through book-cover-04.jpeg should be restored — no code changes required"
+    "Do not remove or alter any other sections on the About or Home pages",
+    "Do not modify files listed under frontend.immutablePaths",
+    "Static award photo assets must be served from frontend/public/assets/generated/ — do not route through the backend"
   ],
   "nonGoals": [
-    "Changing book titles or labels on Home or About pages",
-    "Adding new book covers or removing existing ones",
-    "Modifying any other gallery or page content"
+    "Adding new award photos beyond the existing 4",
+    "Changing the layout or design of the Awards & Recognition section",
+    "Modifying any other page or component"
   ],
   "imageRequirements": {
     "required": [],

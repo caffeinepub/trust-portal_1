@@ -1,26 +1,36 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T05:46:23.810Z",
+  "generatedAt": "2026-02-25T06:35:54.746Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 0,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-69",
-        "summary": "Restore the original book cover static assets in frontend/public/assets/generated/ by reverting book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg, and book-cover-04.jpeg to the versions that existed before Version 25 replaced them. The correct originals are the user-uploaded BOOK (1).jpeg through BOOK (4).jpeg files: book-cover-01.jpeg = गंगा की वाणी, book-cover-02.jpeg = मन के मोती, book-cover-03.jpeg = श्री कृष्ण दर्शन, book-cover-04.jpeg = वृद्धाश्रम. Do not alter the image content — only restore the original uploaded files.",
-        "status": "missing",
+        "id": "REQ-73",
+        "summary": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images. Verify the static asset files exist at frontend/public/assets/generated/award-photo-01.jpeg through award-photo-04.jpeg.",
+        "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/book-cover-01.jpeg",
-          "frontend/public/assets/generated/book-cover-02.jpeg",
-          "frontend/public/assets/generated/book-cover-03.jpeg",
-          "frontend/public/assets/generated/book-cover-04.jpeg"
+          "frontend/src/pages/About.tsx"
         ],
-        "matchedFiles": []
+        "matchedFiles": [
+          "frontend/src/pages/About.tsx"
+        ]
+      },
+      {
+        "id": "REQ-74",
+        "summary": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Home.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Home.tsx"
+        ]
       }
     ]
   },

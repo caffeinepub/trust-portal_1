@@ -36,6 +36,26 @@ const founderAwards = [
     title: 'मानव दीप सेवा ट्रस्ट उद्घाटन',
     subtitle: 'Book Release – Vridhaashram, Deoria',
   },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-25 at 11.48.57 AM.jpeg',
+    title: 'विद्या भारती सप्त शक्ति संगम',
+    subtitle: 'Vidya Bharati Akhil Bharatiya Shiksha Sansthan',
+  },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.14 AM.jpeg',
+    title: 'एक्सीलेंट कवियत्री अवार्ड',
+    subtitle: 'उत्तर प्रदेश कवियत्री अवार्ड सेरेमनी, लखनऊ 2025',
+  },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.15 AM.jpeg',
+    title: 'मातृशक्ति का समाज के नेतृत्व का आह्वान',
+    subtitle: 'Hindustan – Matrishakti Recognition, Deoria',
+  },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.16 AM.jpeg',
+    title: 'शिक्षक सम्मान समारोह',
+    subtitle: 'Innerwheel Club of Deoria Srijan – Certificate of Appreciation',
+  },
 ];
 
 export default function Home() {
@@ -103,16 +123,23 @@ export default function Home() {
                 <div className="mb-6">
                   <h2 className="mb-2 text-4xl font-bold text-primary md:text-5xl">मानव सेवा परमो धर्मः</h2>
                 </div>
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-semibold text-foreground">Anjani Dwivedi (Kavya)</h3>
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold text-foreground">Anjani Dwivedi (Kavya)</h3>
                   <p className="text-base font-medium italic text-trust">Teacher, Writer and Social Worker</p>
-                  <p className="text-lg text-muted-foreground">Founder & President</p>
-                  <p className="leading-relaxed text-foreground">
-                    Guided by the principle that service is the highest duty, our founder has dedicated her life to
-                    uplifting communities and creating meaningful change through compassionate action and sustainable
-                    initiatives.
-                  </p>
+                  <p className="text-muted-foreground">Founder & President, Manavdeep Seva Trust</p>
                 </div>
+                <p className="mb-6 leading-relaxed text-foreground">
+                  With a deep commitment to social welfare and community development, Anjani Dwivedi founded
+                  Manavdeep Seva Trust to serve the underprivileged and create sustainable change. Her work spans
+                  education, women empowerment, elder care, and environmental conservation.
+                </p>
+                <Link
+                  to="/about"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-trust hover:text-trust/80 transition-colors"
+                >
+                  Learn more about our founder
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
 
@@ -165,13 +192,13 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">Awards & Recognition</h3>
               </div>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6">
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-6">
                 {founderAwards.map((award, index) => (
                   <div
                     key={index}
                     className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   >
-                    <div className="aspect-[5/7] overflow-hidden bg-muted">
+                    <div className="relative h-48 w-full overflow-hidden bg-muted">
                       <img
                         src={award.cover}
                         alt={award.title}
@@ -203,74 +230,91 @@ export default function Home() {
       </section>
 
       {/* Mission Statement */}
-      <section className="border-b border-border/40 bg-muted/30 py-16">
+      <section className="border-b border-border/40 bg-primary/5 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-4 text-3xl font-bold text-primary">Our Mission</h2>
-            <p className="text-lg leading-relaxed text-foreground">
-              To empower communities through sustainable initiatives, education, and compassionate service. We believe
-              in creating opportunities that foster growth, dignity, and hope for all individuals, while preserving our
-              environment for future generations.
+            <h2 className="mb-6 text-3xl font-bold text-primary md:text-4xl">Our Mission</h2>
+            <p className="mb-4 text-lg leading-relaxed text-foreground">
+              Manavdeep Seva Trust is committed to the holistic development of society through education, healthcare,
+              women empowerment, elder care, and environmental conservation.
+            </p>
+            <p className="text-muted-foreground">
+              We believe in the power of community and the strength of collective action to create a more just and
+              compassionate world.
             </p>
           </div>
         </div>
       </section>
 
       {/* Key Highlights */}
-      <section className="py-16">
+      <section className="border-b border-border/40 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold text-primary">What We Do</h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="rounded-xl border border-border bg-card p-8 text-center transition-shadow hover:shadow-lg">
-              <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-trust/10">
-                <Heart className="h-8 w-8 text-trust" />
+          <div className="mx-auto max-w-5xl">
+            <h2 className="mb-12 text-center text-3xl font-bold text-primary">Our Impact</h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-trust/10">
+                  <Heart className="h-7 w-7 text-trust" />
+                </div>
+                <h3 className="mb-2 text-3xl font-bold text-primary">500+</h3>
+                <p className="text-sm font-medium text-card-foreground">Families Supported</p>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Providing essential support and resources to families in need across Uttar Pradesh.
+                </p>
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-card-foreground">Community Support</h3>
-              <p className="text-muted-foreground">
-                Providing essential resources, education, and support to underserved communities, helping families
-                thrive and build better futures.
-              </p>
-            </div>
 
-            <div className="rounded-xl border border-border bg-card p-8 text-center transition-shadow hover:shadow-lg">
-              <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-nature/10">
-                <Leaf className="h-8 w-8 text-nature" />
+              <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                  <Users className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="mb-2 text-3xl font-bold text-primary">1000+</h3>
+                <p className="text-sm font-medium text-card-foreground">Students Educated</p>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Empowering the next generation through quality education and skill development programs.
+                </p>
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-card-foreground">Environmental Care</h3>
-              <p className="text-muted-foreground">
-                Implementing sustainable practices and conservation projects that protect our planet and promote
-                eco-friendly living in our communities.
-              </p>
-            </div>
 
-            <div className="rounded-xl border border-border bg-card p-8 text-center transition-shadow hover:shadow-lg">
-              <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                <Users className="h-8 w-8 text-primary" />
+              <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-nature/10">
+                  <Leaf className="h-7 w-7 text-nature" />
+                </div>
+                <h3 className="mb-2 text-3xl font-bold text-primary">200+</h3>
+                <p className="text-sm font-medium text-card-foreground">Trees Planted</p>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Contributing to environmental conservation and a greener future for our communities.
+                </p>
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-card-foreground">Empowerment Programs</h3>
-              <p className="text-muted-foreground">
-                Offering skill development, mentorship, and opportunities that enable individuals to achieve their full
-                potential and contribute to society.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gradient-to-br from-primary/5 to-trust/5 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-primary">Join Us in Making a Difference</h2>
-          <p className="mb-8 text-lg text-muted-foreground">
-            Every contribution, big or small, helps us create lasting positive change in our community.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Contact Us Today
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-4 text-3xl font-bold text-primary md:text-4xl">Join Us in Making a Difference</h2>
+            <p className="mb-8 text-lg text-muted-foreground">
+              Your support can transform lives. Whether through donations, volunteering, or spreading awareness, every
+              contribution matters.
+            </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Link
+                to="/donations"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                <Heart className="h-4 w-4" />
+                Donate Now
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-8 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+              >
+                Contact Us
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

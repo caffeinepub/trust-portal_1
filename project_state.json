@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 53,
+  "projectStateVersion": 57,
   "summary": "Building a website for a trust/charitable organization",
   "architectural_notes": [
     "Website project for a trust/charitable organization",
@@ -8,7 +8,7 @@
   ],
   "known_issues": [
     "Founder photo on homepage has head being cut off - needs object-position adjustment",
-    "Photos in the gallery are not displaying properly for the user"
+    "Award photos in the Awards & Recognition section are not displaying properly"
   ],
   "isFixRequest": true,
   "existing_features": [
@@ -491,6 +491,38 @@
         "REQ-68"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-an-awards-recognition-section-to-the-about-page-frontend-src-pages-about-tsx-within-or-directly-below-the-founder-profile-area-display-the-4-award-photos-award-photo-01-jpeg-through-award-photo-04-jpeg-from-assets-generated-in-a-responsive-grid-layout-2-columns-on-mobile-4-columns-on-desktop-each-as-a-card-with-the-cover-image-using-object-fit-cover-and-a-caption-label-style-consistently-with-the-existing-warm-earthy-about-page-design-theme",
+      "title": "Add an 'Awards & Recognition' section to the About page (frontend/src/pages/About.tsx) within or directly below the founder profile area. Display the 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg from /assets/generated/) in a responsive grid layout (2 columns on mobile, 4 columns on desktop), each as a card with the cover image using object-fit: cover and a caption label. Style consistently with the existing warm, earthy About page design theme.",
+      "reqIds": [
+        "REQ-71"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-awards-recognition-sub-section-to-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-below-the-existing-founder-profile-content-display-the-4-award-photos-award-photo-01-jpeg-through-award-photo-04-jpeg-from-assets-generated-in-a-responsive-grid-or-horizontal-scrollable-layout-each-as-a-card-with-the-image-and-a-caption-style-to-match-the-existing-warm-earthy-design-theme-of-the-home-page-the-existing-founder-profile-photo-name-roles-motto-and-books-by-our-founder-section-must-remain-intact",
+      "title": "Add an 'Awards & Recognition' sub-section to the founder section on the Home page (frontend/src/pages/Home.tsx) below the existing founder profile content. Display the 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg from /assets/generated/) in a responsive grid or horizontal scrollable layout, each as a card with the image and a caption. Style to match the existing warm, earthy design theme of the Home page. The existing founder profile photo, name, roles, motto, and 'Books by Our Founder' section must remain intact.",
+      "reqIds": [
+        "REQ-72"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-awards-recognition-section-on-the-about-page-frontend-src-pages-about-tsx-so-that-all-4-award-photos-award-photo-01-jpeg-through-award-photo-04-jpeg-render-visibly-and-correctly-ensure-each-img-tag-has-a-valid-src-path-starting-with-assets-generated-correct-alt-text-an-explicit-container-size-with-object-fit-cover-and-no-css-rules-that-hide-or-zero-size-the-images-verify-the-static-asset-files-exist-at-frontend-public-assets-generated-award-photo-01-jpeg-through-award-photo-04-jpeg",
+      "title": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images. Verify the static asset files exist at frontend/public/assets/generated/award-photo-01.jpeg through award-photo-04.jpeg.",
+      "reqIds": [
+        "REQ-73"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-awards-recognition-sub-section-on-the-home-page-frontend-src-pages-home-tsx-so-that-all-4-award-photos-award-photo-01-jpeg-through-award-photo-04-jpeg-render-visibly-and-correctly-ensure-each-img-tag-has-a-valid-src-path-starting-with-assets-generated-correct-alt-text-an-explicit-container-size-with-object-fit-cover-and-no-css-rules-that-hide-or-zero-size-the-images",
+      "title": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images.",
+      "reqIds": [
+        "REQ-74"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -701,6 +733,20 @@
       "summary": "Restore the original book cover static assets in frontend/public/assets/generated/ by reverting book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg, and book-cover-04.jpeg to the versions that existed before Version 25 replaced them. The correct originals are the user-uploaded BOOK (1).jpeg through BOOK (4).jpeg files: book-cover-01.jpeg = गंगा की वाणी, book-cover-02.jpeg = मन के मोती, book-cover-03.jpeg = श्री कृष्ण दर्शन, book-cover-04.jpeg = वृद्धाश्रम. Do not alter the image content — only restore the original uploaded files.",
       "reqIds": [
         "REQ-69"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-38",
+      "summary": "Add user-uploaded photos to an 'Awards & Recognition' section on the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-39",
+      "summary": "Store the 4 uploaded award photos as static assets in frontend/public/assets/generated/ with the following filenames: award-photo-01.jpeg (ceremony with women receiving plaque - Vidya Bharati event), award-photo-02.jpeg (round award trophy - Uttar Pradesh Kaviyatri Award, Anjani Dwivedi 'Kavya'), award-photo-03.jpeg (newspaper clipping - Matrishakti recognition article), award-photo-04.jpeg (Innerwheel Club of Deoria Srijan certificate ceremony).",
+      "reqIds": [
+        "REQ-70"
       ],
       "status": "pending"
     }

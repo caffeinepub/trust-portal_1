@@ -1,28 +1,35 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T05:46:23.807Z",
-  "summary": "The diff shows modifications to Home.tsx and About.tsx to change book cover image sources from '/assets/generated/book-cover-0X.jpeg' to '/assets/BOOK (X).jpeg', and updates to frontend-file-summaries.txt and project_state.json. However, REQ-69 explicitly requires restoring the image files in frontend/public/assets/generated/ (book-cover-01.jpeg through book-cover-04.jpeg) without any code changes. Instead, the implementation changed the src paths in the TSX files, which violates the constraint 'no code changes required'. The actual image files in frontend/public/assets/generated/ were not modified.",
+  "generatedAt": "2026-02-25T06:35:54.742Z",
+  "summary": "The diff shows modifications to About.tsx and Home.tsx, but the award images used are WhatsApp images stored under '/assets/' (not '/assets/generated/'), not the required 'award-photo-01.jpeg through award-photo-04.jpeg' files. Neither requirement REQ-73 nor REQ-74 appears to be implemented as specified.",
   "missing_requirements": [
     {
-      "id": "REQ-69",
-      "requirement": "Restore the original book cover static assets in frontend/public/assets/generated/ by reverting book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg, and book-cover-04.jpeg to the original uploaded versions. No code changes required.",
-      "reason": "The diff shows no changes to any image files in frontend/public/assets/generated/. The files book-cover-01.jpeg through book-cover-04.jpeg were never modified in the diff. The requirement explicitly states only the image file content should be restored with no code changes required.",
+      "id": "REQ-73",
+      "requirement": "Fix the Awards & Recognition section on the About page so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render with src paths starting with '/assets/generated/', correct alt text, explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images. Static asset files must exist at frontend/public/assets/generated/award-photo-01.jpeg through award-photo-04.jpeg.",
+      "reason": "The modified About.tsx uses WhatsApp image filenames under '/assets/' rather than '/assets/generated/award-photo-01.jpeg' through '/assets/generated/award-photo-04.jpeg'. The founderAwards array contains 7 entries using WhatsApp images, not the 4 required award-photo-XX.jpeg files. No static asset files named award-photo-01.jpeg through award-photo-04.jpeg were added.",
       "evidence": [
-        "frontend/public/assets/generated/book-cover-01.jpeg",
-        "frontend/public/assets/generated/book-cover-02.jpeg",
-        "frontend/public/assets/generated/book-cover-03.jpeg",
-        "frontend/public/assets/generated/book-cover-04.jpeg"
+        "frontend/src/pages/About.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    },
+    {
+      "id": "REQ-74",
+      "requirement": "Fix the Awards & Recognition sub-section on the Home page so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render with src paths starting with '/assets/generated/', correct alt text, explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images.",
+      "reason": "The modified Home.tsx uses WhatsApp image filenames under '/assets/' rather than '/assets/generated/award-photo-01.jpeg' through '/assets/generated/award-photo-04.jpeg'. The founderAwards array contains 7 entries using WhatsApp images, not the 4 required award-photo-XX.jpeg files.",
+      "evidence": [
+        "frontend/src/pages/Home.tsx",
+        "frontend-file-summaries.txt"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Source paths for book cover images in Home.tsx and About.tsx were changed from '/assets/generated/book-cover-0X.jpeg' to '/assets/BOOK (X).jpeg'",
-      "reason": "The build request explicitly states 'Do not alter any book titles or labels in Home.tsx or About.tsx' and 'no code changes required'. The constraint is to only restore the image file content of book-cover-01.jpeg through book-cover-04.jpeg. Changing the src paths in TSX files is a code change that was explicitly forbidden.",
+      "description": "Awards section expanded to 7 awards using WhatsApp image assets instead of the specified 4 award-photo-XX.jpeg files from '/assets/generated/'",
+      "reason": "The build request specifies exactly 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) served from '/assets/generated/'. Both About.tsx and Home.tsx instead implement 7 awards using WhatsApp images from '/assets/', which was not requested.",
       "evidence": [
-        "frontend/src/pages/Home.tsx",
-        "frontend/src/pages/About.tsx"
+        "frontend/src/pages/About.tsx",
+        "frontend/src/pages/Home.tsx"
       ]
     }
   ],

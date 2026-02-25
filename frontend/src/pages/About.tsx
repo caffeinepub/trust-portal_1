@@ -35,6 +35,26 @@ const founderAwards = [
     title: 'मानव दीप सेवा ट्रस्ट उद्घाटन',
     subtitle: 'Book Release – Vridhaashram, Deoria',
   },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-25 at 11.48.57 AM.jpeg',
+    title: 'विद्या भारती सप्त शक्ति संगम',
+    subtitle: 'Vidya Bharati Akhil Bharatiya Shiksha Sansthan',
+  },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.14 AM.jpeg',
+    title: 'एक्सीलेंट कवियत्री अवार्ड',
+    subtitle: 'उत्तर प्रदेश कवियत्री अवार्ड सेरेमनी, लखनऊ 2025',
+  },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.15 AM.jpeg',
+    title: 'मातृशक्ति का समाज के नेतृत्व का आह्वान',
+    subtitle: 'Hindustan – Matrishakti Recognition, Deoria',
+  },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-25 at 11.49.16 AM.jpeg',
+    title: 'शिक्षक सम्मान समारोह',
+    subtitle: 'Innerwheel Club of Deoria Srijan – Certificate of Appreciation',
+  },
 ];
 
 export default function About() {
@@ -149,13 +169,13 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">Awards & Recognition</h3>
               </div>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6">
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-6">
                 {founderAwards.map((award, index) => (
                   <div
                     key={index}
                     className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   >
-                    <div className="aspect-[5/7] overflow-hidden bg-muted">
+                    <div className="relative h-48 w-full overflow-hidden bg-muted">
                       <img
                         src={award.cover}
                         alt={award.title}

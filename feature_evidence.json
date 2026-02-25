@@ -1,4 +1,45 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-fix-the-awards-recognition-section-on-the-about-page-frontend-src-pages-about-tsx-so-that-all-4-award-photos-award-photo-01-jpeg-through-award-photo-04-jpeg-render-visibly-and-correctly-ensure-each-img-tag-has-a-valid-src-path-starting-with-assets-generated-correct-alt-text-an-explicit-container-size-with-object-fit-cover-and-no-css-rules-that-hide-or-zero-size-the-images-verify-the-static-asset-files-exist-at-frontend-public-assets-generated-award-photo-01-jpeg-through-award-photo-04-jpeg",
+      "featureTitle": "Fix the Awards & Recognition section on the About page (frontend/src/pages/About.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images. Verify the static asset files exist at frontend/public/assets/generated/award-photo-01.jpeg through award-photo-04.jpeg.",
+      "files": [
+        "frontend/src/pages/About.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-73"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-fix-the-awards-recognition-sub-section-on-the-home-page-frontend-src-pages-home-tsx-so-that-all-4-award-photos-award-photo-01-jpeg-through-award-photo-04-jpeg-render-visibly-and-correctly-ensure-each-img-tag-has-a-valid-src-path-starting-with-assets-generated-correct-alt-text-an-explicit-container-size-with-object-fit-cover-and-no-css-rules-that-hide-or-zero-size-the-images",
+      "featureTitle": "Fix the Awards & Recognition sub-section on the Home page (frontend/src/pages/Home.tsx) so that all 4 award photos (award-photo-01.jpeg through award-photo-04.jpeg) render visibly and correctly. Ensure each <img> tag has a valid src path starting with '/assets/generated/', correct alt text, an explicit container size with object-fit: cover, and no CSS rules that hide or zero-size the images.",
+      "files": [
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-74"
+      ],
+      "confidence": "high"
+    }
+  ]
 }
