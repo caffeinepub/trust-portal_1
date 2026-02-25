@@ -1,57 +1,83 @@
 {
   "kind": "build_request",
-  "title": "Add 'Teacher, Writer and Social Worker' roles to founder description",
+  "title": "Replace book cover photos with 4 newly uploaded book covers",
   "projectName": "Manavdeep Seva Trust",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-52",
-      "text": "Update the founder description on the About page (frontend/src/pages/About.tsx) to include the roles 'Teacher, Writer and Social Worker' as a subtitle or descriptor line beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
+      "id": "REQ-66",
+      "text": "Store the 4 newly uploaded book cover photos as static assets in frontend/public/assets/generated/ with the following filenames: BOOK (1).jpeg → book-cover-01.jpeg (गंगा की वाणी), BOOK (2).jpeg → book-cover-02.jpeg (मन के मोती), BOOK (3).jpeg → book-cover-03.jpeg (श्री कृष्ण दर्शन), BOOK (4).jpeg → book-cover-04.jpeg (वृद्धाश्रम). These replace any existing book cover files.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-latest"
         ],
         "quotes": [
-          "Teacher,Writer and Social worker"
+          "DIYE HUWE BOOK KI PHOTOS KI JAGAH PE IN PHOTOS KO DALE"
         ]
       },
       "acceptanceCriteria": [
-        "The text 'Teacher, Writer and Social Worker' appears on the About page beneath or alongside the founder's name 'Anjani Dwivedi (Kavya)'.",
-        "The roles text is styled consistently with the existing About page design (e.g., as a subtitle, badge, or secondary text).",
-        "No other content on the About page is removed or rearranged."
+        "book-cover-01.jpeg in frontend/public/assets/generated/ shows the 'गंगा की वाणी' cover (Ganga goddess imagery)",
+        "book-cover-02.jpeg in frontend/public/assets/generated/ shows the 'मन के मोती' cover (maroon/yellow with Krishna)",
+        "book-cover-03.jpeg in frontend/public/assets/generated/ shows the 'श्री कृष्ण दर्शन' cover (Krishna with cosmic form)",
+        "book-cover-04.jpeg in frontend/public/assets/generated/ shows the 'वृद्धाश्रम' cover (two elderly figures)"
       ]
     },
     {
-      "id": "REQ-53",
-      "text": "Update the founder section on the Home page (frontend/src/pages/Home.tsx) to include the roles 'Teacher, Writer and Social Worker' as a subtitle or descriptor beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
+      "id": "REQ-67",
+      "text": "Update the 'Books by Our Founder' sub-section on the Home page (frontend/src/pages/Home.tsx) to display 4 book cards: book-cover-01.jpeg labeled 'गंगा की वाणी', book-cover-02.jpeg labeled 'मन के मोती', book-cover-03.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-04.jpeg labeled 'वृद्धाश्रम'. Replace the existing 3-book layout with this 4-book layout.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-latest"
         ],
         "quotes": [
-          "Teacher,Writer and Social worker"
+          "DIYE HUWE BOOK KI PHOTOS KI JAGAH PE IN PHOTOS KO DALE"
         ]
       },
       "acceptanceCriteria": [
-        "The text 'Teacher, Writer and Social Worker' appears in the founder section on the Home page beneath or alongside the founder's name.",
-        "The roles text is styled consistently with the existing founder section design.",
-        "The founder photo, motto text 'मानव सेवा परमो धर्मः', and other existing elements remain unchanged."
+        "The 'Books by Our Founder' section on the Home page shows exactly 4 book cards",
+        "Each card displays the correct new cover image from /assets/generated/",
+        "Book titles 'गंगा की वाणी', 'मन के मोती', 'श्री कृष्ण दर्शन', and 'वृद्धाश्रम' are displayed beneath each respective cover",
+        "The layout is responsive (grid or horizontal scroll) and consistent with the existing warm earthy design theme"
+      ]
+    },
+    {
+      "id": "REQ-68",
+      "text": "Update the 'Books by Our Founder' sub-section on the About page (frontend/src/pages/About.tsx) to display 4 book cards: book-cover-01.jpeg labeled 'गंगा की वाणी', book-cover-02.jpeg labeled 'मन के मोती', book-cover-03.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-04.jpeg labeled 'वृद्धाश्रम'. Replace the existing 3-book layout with this 4-book layout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "DIYE HUWE BOOK KI PHOTOS KI JAGAH PE IN PHOTOS KO DALE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The 'Books by Our Founder' section on the About page shows exactly 4 book cards",
+        "Each card displays the correct new cover image from /assets/generated/",
+        "Book titles 'गंगा की वाणी', 'मन के मोती', 'श्री कृष्ण दर्शन', and 'वृद्धाश्रम' are displayed beneath each respective cover",
+        "The layout is a responsive grid consistent with the existing About page design"
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/.",
-    "Do not alter the founder photo display, motto text, or any other existing content on the Home or About pages beyond adding the roles descriptor."
+    "Do not remove or alter any other content in the founder section on Home or About pages",
+    "The new book-cover-04.jpeg must be added as an additional asset — do not remove any existing gallery or other assets"
   ],
   "nonGoals": [
-    "Adding new pages or routes.",
-    "Changing backend logic or data models.",
-    "Modifying gallery, donations, contact, or any other pages."
+    "Changes to the Gallery page",
+    "Changes to the backend",
+    "Changes to navigation, footer, or other pages"
   ],
   "imageRequirements": {
     "required": [],
-    "edits": []
+    "edits": [
+      "Replace with uploaded BOOK (1).jpeg photo of 'गंगा की वाणी' book cover (book-cover-01.jpeg > book-cover-01.jpeg)",
+      "Replace with uploaded BOOK (2).jpeg photo of 'मन के मोती' book cover (book-cover-02.jpeg > book-cover-02.jpeg)",
+      "Replace with uploaded BOOK (3).jpeg photo of 'श्री कृष्ण दर्शन' book cover (book-cover-03.jpeg > book-cover-03.jpeg)",
+      "New book cover photo of 'वृद्धाश्रम' from uploaded BOOK (4).jpeg (book-cover-04.dim_600x900.jpeg)"
+    ]
   }
 }

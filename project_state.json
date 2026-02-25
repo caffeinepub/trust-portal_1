@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 39,
+  "projectStateVersion": 51,
   "summary": "Building a website for a trust/charitable organization",
   "architectural_notes": [
     "Website project for a trust/charitable organization",
@@ -10,7 +10,8 @@
     "Founder photo on homepage has head being cut off - needs object-position adjustment",
     "Photos in the gallery are not displaying properly for the user"
   ],
-  "isFixRequest": false,
+  "isFixRequest": true,
+  "imageRequirements": "## Edit Images\n- Replace with uploaded BOOK (1).jpeg photo of 'गंगा की वाणी' book cover (book-cover-01.jpeg > book-cover-01.jpeg)\n- Replace with uploaded BOOK (2).jpeg photo of 'मन के मोती' book cover (book-cover-02.jpeg > book-cover-02.jpeg)\n- Replace with uploaded BOOK (3).jpeg photo of 'श्री कृष्ण दर्शन' book cover (book-cover-03.jpeg > book-cover-03.jpeg)\n- New book cover photo of 'वृद्धाश्रम' from uploaded BOOK (4).jpeg (book-cover-04.dim_600x900.jpeg)",
   "existing_features": [
     {
       "id": "feature-create-a-homepage-with-a-hero-section-introducing-the-trust-its-mission-statement-and-key-highlights",
@@ -387,6 +388,110 @@
         "REQ-53"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-to-include-a-books-by-our-founder-sub-section-below-the-existing-founder-profile-content-display-a-horizontal-scrollable-or-responsive-grid-of-book-cover-images-book-cover-01-jpeg-through-book-cover-03-jpeg-from-assets-generated-with-each-book-shown-as-a-card-containing-the-cover-image-and-a-book-title-label-style-the-section-to-match-the-existing-warm-earthy-design-theme",
+      "title": "Update the founder section on the Home page (frontend/src/pages/Home.tsx) to include a 'Books by Our Founder' sub-section below the existing founder profile content. Display a horizontal scrollable or responsive grid of book cover images (book-cover-01.jpeg through book-cover-03.jpeg from /assets/generated/) with each book shown as a card containing the cover image and a book title label. Style the section to match the existing warm, earthy design theme.",
+      "reqIds": [
+        "REQ-54"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-about-page-frontend-src-pages-about-tsx-to-include-a-books-by-our-founder-sub-section-within-or-directly-below-the-founder-profile-area-display-book-cover-images-book-cover-01-jpeg-through-book-cover-03-jpeg-from-assets-generated-in-a-responsive-grid-layout-each-as-a-card-with-the-cover-image-and-a-book-title-style-consistently-with-the-existing-about-page-design",
+      "title": "Update the About page (frontend/src/pages/About.tsx) to include a 'Books by Our Founder' sub-section within or directly below the founder profile area. Display book cover images (book-cover-01.jpeg through book-cover-03.jpeg from /assets/generated/) in a responsive grid layout, each as a card with the cover image and a book title. Style consistently with the existing About page design.",
+      "reqIds": [
+        "REQ-55"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-the-3-generated-book-cover-images-as-static-assets-in-frontend-public-assets-generated-with-filenames-book-cover-01-jpeg-book-cover-02-jpeg-and-book-cover-03-jpeg-for-use-in-the-founder-section-book-gallery-on-both-the-home-and-about-pages",
+      "title": "Store the 3 generated book cover images as static assets in frontend/public/assets/generated/ with filenames book-cover-01.jpeg, book-cover-02.jpeg, and book-cover-03.jpeg for use in the founder section book gallery on both the Home and About pages.",
+      "reqIds": [
+        "REQ-56"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-books-by-our-founder-sub-section-on-the-home-page-frontend-src-pages-home-tsx-so-that-the-book-cards-display-the-correct-titles-matching-the-new-covers-book-cover-01-jpeg-labeled-book-cover-02-jpeg-labeled-and-book-cover-03-jpeg-labeled",
+      "title": "Update the 'Books by Our Founder' sub-section on the Home page (frontend/src/pages/Home.tsx) so that the book cards display the correct titles matching the new covers: book-cover-01.jpeg labeled 'मन के मोती', book-cover-02.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-03.jpeg labeled 'वृद्धाश्रम'.",
+      "reqIds": [
+        "REQ-59"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-books-by-our-founder-sub-section-on-the-about-page-frontend-src-pages-about-tsx-so-that-the-book-cards-display-the-correct-titles-matching-the-new-covers-book-cover-01-jpeg-labeled-book-cover-02-jpeg-labeled-and-book-cover-03-jpeg-labeled",
+      "title": "Update the 'Books by Our Founder' sub-section on the About page (frontend/src/pages/About.tsx) so that the book cards display the correct titles matching the new covers: book-cover-01.jpeg labeled 'मन के मोती', book-cover-02.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-03.jpeg labeled 'वृद्धाश्रम'.",
+      "reqIds": [
+        "REQ-60"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-books-by-our-founder-sub-section-entirely-from-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-including-all-3-book-cover-image-cards-book-cover-01-jpeg-book-cover-02-jpeg-book-cover-03-jpeg-and-the-section-heading-the-rest-of-the-founder-section-content-must-remain-intact",
+      "title": "Remove the 'Books by Our Founder' sub-section entirely from the founder section on the Home page (frontend/src/pages/Home.tsx), including all 3 book cover image cards (book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg) and the section heading. The rest of the founder section content must remain intact.",
+      "reqIds": [
+        "REQ-61"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-books-by-our-founder-sub-section-entirely-from-the-about-page-frontend-src-pages-about-tsx-including-all-3-book-cover-image-cards-book-cover-01-jpeg-book-cover-02-jpeg-book-cover-03-jpeg-and-the-section-heading-the-rest-of-the-founder-profile-content-must-remain-intact",
+      "title": "Remove the 'Books by Our Founder' sub-section entirely from the About page (frontend/src/pages/About.tsx), including all 3 book cover image cards (book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg) and the section heading. The rest of the founder profile content must remain intact.",
+      "reqIds": [
+        "REQ-62"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-restore-the-books-by-our-founder-sub-section-on-the-home-page-frontend-src-pages-home-tsx-that-was-incorrectly-removed-re-add-the-section-below-the-founder-profile-content-displaying-book-cover-images-book-cover-01-jpeg-labeled-book-cover-02-jpeg-labeled-book-cover-03-jpeg-labeled-from-assets-generated-in-a-responsive-grid-or-horizontal-scrollable-layout-each-as-a-card-with-the-cover-image-and-book-title-style-to-match-the-existing-warm-earthy-design-theme",
+      "title": "Restore the 'Books by Our Founder' sub-section on the Home page (frontend/src/pages/Home.tsx) that was incorrectly removed. Re-add the section below the founder profile content displaying book cover images (book-cover-01.jpeg labeled 'मन के मोती', book-cover-02.jpeg labeled 'श्री कृष्ण दर्शन', book-cover-03.jpeg labeled 'वृद्धाश्रम') from /assets/generated/ in a responsive grid or horizontal scrollable layout, each as a card with the cover image and book title. Style to match the existing warm, earthy design theme.",
+      "reqIds": [
+        "REQ-63"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-restore-the-books-by-our-founder-sub-section-on-the-about-page-frontend-src-pages-about-tsx-that-was-incorrectly-removed-re-add-the-section-within-or-directly-below-the-founder-profile-area-displaying-book-cover-images-book-cover-01-jpeg-labeled-book-cover-02-jpeg-labeled-book-cover-03-jpeg-labeled-from-assets-generated-in-a-responsive-grid-layout-each-as-a-card-with-the-cover-image-and-book-title-style-consistently-with-the-existing-about-page-design",
+      "title": "Restore the 'Books by Our Founder' sub-section on the About page (frontend/src/pages/About.tsx) that was incorrectly removed. Re-add the section within or directly below the founder profile area displaying book cover images (book-cover-01.jpeg labeled 'मन के मोती', book-cover-02.jpeg labeled 'श्री कृष्ण दर्शन', book-cover-03.jpeg labeled 'वृद्धाश्रम') from /assets/generated/ in a responsive grid layout, each as a card with the cover image and book title. Style consistently with the existing About page design.",
+      "reqIds": [
+        "REQ-64"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-photo-gallery-the-3-director-founder-photos-from-the-founder-section-on-the-home-page-frontend-src-pages-home-tsx-only-the-photo-grid-gallery-showing-multiple-director-photos-should-be-removed-the-single-founder-profile-photo-the-founder-s-name-roles-motto-text-and-the-books-by-our-founder-book-cover-section-must-all-remain-intact",
+      "title": "Remove the photo gallery (the 3 director/founder photos) from the founder section on the Home page (frontend/src/pages/Home.tsx). Only the photo grid/gallery showing multiple director photos should be removed — the single founder profile photo, the founder's name, roles, motto text, and the 'Books by Our Founder' book cover section must all remain intact.",
+      "reqIds": [
+        "REQ-65"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-the-4-newly-uploaded-book-cover-photos-as-static-assets-in-frontend-public-assets-generated-with-the-following-filenames-book-1-jpeg-book-cover-01-jpeg-book-2-jpeg-book-cover-02-jpeg-book-3-jpeg-book-cover-03-jpeg-book-4-jpeg-book-cover-04-jpeg-these-replace-any-existing-book-cover-files",
+      "title": "Store the 4 newly uploaded book cover photos as static assets in frontend/public/assets/generated/ with the following filenames: BOOK (1).jpeg → book-cover-01.jpeg (गंगा की वाणी), BOOK (2).jpeg → book-cover-02.jpeg (मन के मोती), BOOK (3).jpeg → book-cover-03.jpeg (श्री कृष्ण दर्शन), BOOK (4).jpeg → book-cover-04.jpeg (वृद्धाश्रम). These replace any existing book cover files.",
+      "reqIds": [
+        "REQ-66"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-books-by-our-founder-sub-section-on-the-home-page-frontend-src-pages-home-tsx-to-display-4-book-cards-book-cover-01-jpeg-labeled-book-cover-02-jpeg-labeled-book-cover-03-jpeg-labeled-and-book-cover-04-jpeg-labeled-replace-the-existing-3-book-layout-with-this-4-book-layout",
+      "title": "Update the 'Books by Our Founder' sub-section on the Home page (frontend/src/pages/Home.tsx) to display 4 book cards: book-cover-01.jpeg labeled 'गंगा की वाणी', book-cover-02.jpeg labeled 'मन के मोती', book-cover-03.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-04.jpeg labeled 'वृद्धाश्रम'. Replace the existing 3-book layout with this 4-book layout.",
+      "reqIds": [
+        "REQ-67"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-books-by-our-founder-sub-section-on-the-about-page-frontend-src-pages-about-tsx-to-display-4-book-cards-book-cover-01-jpeg-labeled-book-cover-02-jpeg-labeled-book-cover-03-jpeg-labeled-and-book-cover-04-jpeg-labeled-replace-the-existing-3-book-layout-with-this-4-book-layout",
+      "title": "Update the 'Books by Our Founder' sub-section on the About page (frontend/src/pages/About.tsx) to display 4 book cards: book-cover-01.jpeg labeled 'गंगा की वाणी', book-cover-02.jpeg labeled 'मन के मोती', book-cover-03.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-04.jpeg labeled 'वृद्धाश्रम'. Replace the existing 3-book layout with this 4-book layout.",
+      "reqIds": [
+        "REQ-68"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -549,6 +654,40 @@
     {
       "id": "AR-29",
       "summary": "Add roles/titles 'Teacher, Writer and Social Worker' - likely as descriptors for founder Anjani Dwivedi (Kavya) on the About page or homepage founder section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-30",
+      "summary": "Add a photo gallery in the 'Our Founder' section on the About page (or homepage founder section) showcasing books written by founder Anjani Dwivedi (Kavya)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-31",
+      "summary": "Delete the 3 existing book cover photos (book-cover-01.jpeg through book-cover-03.jpeg) and replace them with 3 new user-provided photos for the founder section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-32",
+      "summary": "Store the 3 newly uploaded founder section images as static assets in frontend/public/assets/generated/ with filenames book-cover-01.jpeg, book-cover-02.jpeg, and book-cover-03.jpeg, replacing the existing files. The new images are: (1) WhatsApp Image 2026-02-24 at 4.46.19 PM (3).jpeg → book-cover-01.jpeg, (2) WhatsApp Image 2026-02-24 at 4.46.20 PM (3).jpeg → book-cover-02.jpeg, (3) WhatsApp Image 2026-02-24 at 4.46.16 PM.jpeg → book-cover-03.jpeg.",
+      "reqIds": [
+        "REQ-57"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-33",
+      "summary": "Store the 3 newly uploaded book cover photos as static assets in frontend/public/assets/generated/ replacing the existing files: (1) 'WhatsApp Image 2026-02-24 at 4.46.25 PM (3).jpeg' (मन के मोती cover) → book-cover-01.jpeg, (2) 'WhatsApp Image 2026-02-24 at 4.46.25 PM (1).jpeg' (श्री कृष्ण दर्शन cover) → book-cover-02.jpeg, (3) 'WhatsApp Image 2026-02-24 at 4.46.25 PM (2).jpeg' (वृद्धाश्रम cover) → book-cover-03.jpeg.",
+      "reqIds": [
+        "REQ-58"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-35",
+      "summary": "Restore the 'Books by Our Founder' sub-section on both Home and About pages - only the photo gallery (director's 3 photos) should be removed, not the book covers section",
       "reqIds": [],
       "status": "pending"
     }

@@ -1,5 +1,42 @@
 import { Link } from '@tanstack/react-router';
-import { Heart, Users, Leaf, ArrowRight } from 'lucide-react';
+import { Heart, Users, Leaf, ArrowRight, Award, BookOpen } from 'lucide-react';
+
+const founderBooks = [
+  {
+    src: '/assets/generated/book-cover-01.jpeg',
+    title: 'गंगा की वाणी',
+  },
+  {
+    src: '/assets/generated/book-cover-02.jpeg',
+    title: 'मन के मोती',
+  },
+  {
+    src: '/assets/generated/book-cover-03.jpeg',
+    title: 'श्री कृष्ण दर्शन',
+  },
+  {
+    src: '/assets/BOOK (4).jpeg',
+    title: 'वृद्धाश्रम',
+  },
+];
+
+const founderAwards = [
+  {
+    cover: '/assets/WhatsApp Image 2026-02-24 at 4.46.19 PM (3).jpeg',
+    title: 'आचार्य अकादमी प्रमाण-पत्र',
+    subtitle: 'Acharya Academy, Chuliana, Rohtak (Haryana)',
+  },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-24 at 4.46.20 PM (3).jpeg',
+    title: 'उत्तर प्रदेश महिला रत्न सम्मान',
+    subtitle: 'Neeraj Smriti Kavya Mahotsav, Jhansi (UP)',
+  },
+  {
+    cover: '/assets/WhatsApp Image 2026-02-24 at 4.46.16 PM.jpeg',
+    title: 'मानव दीप सेवा ट्रस्ट उद्घाटन',
+    subtitle: 'Book Release – Vridhaashram, Deoria',
+  },
+];
 
 export default function Home() {
   return (
@@ -44,7 +81,8 @@ export default function Home() {
       {/* Founder Section */}
       <section className="border-y border-border/40 bg-gradient-to-br from-trust/5 via-background to-nature/5 py-16">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-5xl">
+            {/* Founder Profile */}
             <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
               {/* Founder Photo */}
               <div className="flex-shrink-0">
@@ -75,6 +113,89 @@ export default function Home() {
                     initiatives.
                   </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Books by Our Founder */}
+            <div className="mt-12">
+              <div className="mb-6 flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
+                  <BookOpen className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">Books by Our Founder</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:gap-6">
+                {founderBooks.map((book, index) => (
+                  <div
+                    key={index}
+                    className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  >
+                    <div className="aspect-[5/7] overflow-hidden bg-muted">
+                      <img
+                        src={book.src}
+                        alt={book.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          const parent = target.parentElement;
+                          if (parent) {
+                            parent.classList.add('flex', 'items-center', 'justify-center', 'bg-trust/10');
+                            const placeholder = document.createElement('div');
+                            placeholder.className = 'text-center p-4';
+                            placeholder.innerHTML = `<div class="text-3xl mb-2">📖</div><p class="text-sm text-muted-foreground">${book.title}</p>`;
+                            parent.appendChild(placeholder);
+                          }
+                        }}
+                      />
+                    </div>
+                    <div className="p-3 text-center">
+                      <p className="text-sm font-semibold text-card-foreground leading-tight">{book.title}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Awards & Recognition */}
+            <div className="mt-12">
+              <div className="mb-6 flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
+                  <Award className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">Awards & Recognition</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6">
+                {founderAwards.map((award, index) => (
+                  <div
+                    key={index}
+                    className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  >
+                    <div className="aspect-[5/7] overflow-hidden bg-muted">
+                      <img
+                        src={award.cover}
+                        alt={award.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          const parent = target.parentElement;
+                          if (parent) {
+                            parent.classList.add('flex', 'items-center', 'justify-center', 'bg-trust/10');
+                            const placeholder = document.createElement('div');
+                            placeholder.className = 'text-center p-4';
+                            placeholder.innerHTML = `<div class="text-3xl mb-2">🏆</div><p class="text-sm text-muted-foreground">${award.title}</p>`;
+                            parent.appendChild(placeholder);
+                          }
+                        }}
+                      />
+                    </div>
+                    <div className="p-3 text-center">
+                      <p className="text-sm font-semibold text-card-foreground leading-tight">{award.title}</p>
+                      <p className="mt-1 text-xs text-muted-foreground leading-tight">{award.subtitle}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

@@ -1,11 +1,21 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T00:42:34.631Z",
-  "summary": "Both REQ-52 and REQ-53 are fully implemented. The About page (frontend/src/pages/About.tsx) now displays 'Teacher, Writer and Social Worker' as an italic subtitle beneath 'Anjani Dwivedi (Kavya)', and the Home page (frontend/src/pages/Home.tsx) does the same in the founder section. The motto text and founder photo remain unchanged on the Home page. No files under frontend/src/hooks/ or frontend/src/components/ui/ were modified.",
-  "missing_requirements": [],
+  "generatedAt": "2026-02-25T05:39:32.430Z",
+  "summary": "The diff modifies Home.tsx and About.tsx to display 4 book cards with correct titles and paths for books 1-3 (using /assets/generated/book-cover-0X.jpeg), but uses '/assets/BOOK (4).jpeg' for the 4th book instead of '/assets/generated/book-cover-04.jpeg'. No new static asset files are added in the diff (the ADDED FILES section shows none), meaning the actual image files are not stored in frontend/public/assets/generated/ as required.",
+  "missing_requirements": [
+    {
+      "id": "REQ-66",
+      "requirement": "Store the 4 newly uploaded book cover photos as static assets in frontend/public/assets/generated/ with filenames book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg, and book-cover-04.jpeg.",
+      "reason": "The diff shows no added files (ADDED FILES: none). The image assets themselves are not present in the diff. Additionally, book-cover-04.jpeg is not stored at /assets/generated/book-cover-04.jpeg — both Home.tsx and About.tsx reference '/assets/BOOK (4).jpeg' instead of '/assets/generated/book-cover-04.jpeg'.",
+      "evidence": [
+        "frontend/src/pages/Home.tsx",
+        "frontend/src/pages/About.tsx"
+      ]
+    }
+  ],
   "hallucinated_features": [],
-  "confidence": 0.98,
+  "confidence": 0.88,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/pages/About.tsx",

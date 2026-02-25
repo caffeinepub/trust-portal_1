@@ -1,37 +1,71 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add 'Teacher, Writer and Social Worker' roles to founder description",
+  "title": "Replace book cover photos with 4 newly uploaded book covers",
   "requirements": [
     {
-      "id": "REQ-52",
-      "summary": "Update the founder description on the About page to include the roles 'Teacher, Writer and Social Worker' as a subtitle beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
+      "id": "REQ-66",
+      "summary": "Store the 4 newly uploaded book cover photos as static assets with standardized filenames",
       "acceptanceCriteria": [
-        "The text 'Teacher, Writer and Social Worker' appears on the About page beneath or alongside the founder's name 'Anjani Dwivedi (Kavya)'.",
-        "The roles text is styled consistently with the existing About page design (e.g., as a subtitle, badge, or secondary text).",
-        "No other content on the About page is removed or rearranged."
+        "book-cover-01.jpeg in frontend/public/assets/generated/ shows the 'गंगा की वाणी' cover (Ganga goddess imagery)",
+        "book-cover-02.jpeg in frontend/public/assets/generated/ shows the 'मन के मोती' cover (maroon/yellow with Krishna)",
+        "book-cover-03.jpeg in frontend/public/assets/generated/ shows the 'श्री कृष्ण दर्शन' cover (Krishna with cosmic form)",
+        "book-cover-04.jpeg in frontend/public/assets/generated/ shows the 'वृद्धाश्रम' cover (two elderly figures)"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/About.tsx",
-          "operation": "modify",
-          "description": "Add the text 'Teacher, Writer and Social Worker' as a subtitle or descriptor line beneath the founder's name 'Anjani Dwivedi (Kavya)' in the founder section. Style the roles text consistently with the existing About page design using appropriate text styling classes (e.g., text-muted-foreground, italic, or a smaller font size). Ensure no other content in the About page is removed or rearranged."
+          "path": "frontend/public/assets/generated/book-cover-01.jpeg",
+          "operation": "create",
+          "description": "Add the 'गंगा की वाणी' book cover photo (uploaded as BOOK (1).jpeg) showing Ganga goddess imagery with dark background and ornate crown"
+        },
+        {
+          "path": "frontend/public/assets/generated/book-cover-02.jpeg",
+          "operation": "create",
+          "description": "Add the 'मन के मोती' book cover photo (uploaded as BOOK (2).jpeg) showing maroon/yellow design with Krishna imagery in a circle and bird motif"
+        },
+        {
+          "path": "frontend/public/assets/generated/book-cover-03.jpeg",
+          "operation": "create",
+          "description": "Add the 'श्री कृष्ण दर्शन' book cover photo (uploaded as BOOK (3).jpeg) showing Krishna with cosmic form and multiple divine figures in an oval frame"
+        },
+        {
+          "path": "frontend/public/assets/generated/book-cover-04.dim_600x900.jpeg",
+          "operation": "create",
+          "description": "Add the 'वृद्धाश्रम' book cover photo (uploaded as BOOK (4).jpeg) showing two elderly figures in warm sepia tones with a reflective scene"
         }
       ]
     },
     {
-      "id": "REQ-53",
-      "summary": "Update the founder section on the Home page to include the roles 'Teacher, Writer and Social Worker' as a subtitle beneath the founder's name 'Anjani Dwivedi (Kavya)'.",
+      "id": "REQ-67",
+      "summary": "Update the 'Books by Our Founder' section on Home page to display 4 book cards with new cover images",
       "acceptanceCriteria": [
-        "The text 'Teacher, Writer and Social Worker' appears in the founder section on the Home page beneath or alongside the founder's name.",
-        "The roles text is styled consistently with the existing founder section design.",
-        "The founder photo, motto text 'मानव सेवा परमो धर्मः', and other existing elements remain unchanged."
+        "The 'Books by Our Founder' section on the Home page shows exactly 4 book cards",
+        "Each card displays the correct new cover image from /assets/generated/",
+        "Book titles 'गंगा की वाणी', 'मन के मोती', 'श्री कृष्ण दर्शन', and 'वृद्धाश्रम' are displayed beneath each respective cover",
+        "The layout is responsive (grid or horizontal scroll) and consistent with the existing warm earthy design theme"
       ],
       "file_operations": [
         {
           "path": "frontend/src/pages/Home.tsx",
           "operation": "modify",
-          "description": "Add the text 'Teacher, Writer and Social Worker' as a subtitle or descriptor line beneath the founder's name 'Anjani Dwivedi (Kavya)' in the founder profile section. Style the roles text consistently with the existing founder section design using appropriate text styling classes. Ensure the founder photo, motto text 'मानव सेवा परमो धर्मः', and all other existing elements remain unchanged."
+          "description": "Update the 'Books by Our Founder' sub-section to display 4 book cards instead of 3. Replace existing book cover image paths with frontend/public/assets/generated/book-cover-01.jpeg (labeled 'गंगा की वाणी'), frontend/public/assets/generated/book-cover-02.jpeg (labeled 'मन के मोती'), frontend/public/assets/generated/book-cover-03.jpeg (labeled 'श्री कृष्ण दर्शन'), and frontend/public/assets/generated/book-cover-04.dim_600x900.jpeg (labeled 'वृद्धाश्रम'). Ensure the layout is responsive and maintains the existing warm earthy design theme with proper grid or horizontal scroll for 4 items"
+        }
+      ]
+    },
+    {
+      "id": "REQ-68",
+      "summary": "Update the 'Books by Our Founder' section on About page to display 4 book cards with new cover images",
+      "acceptanceCriteria": [
+        "The 'Books by Our Founder' section on the About page shows exactly 4 book cards",
+        "Each card displays the correct new cover image from /assets/generated/",
+        "Book titles 'गंगा की वाणी', 'मन के मोती', 'श्री कृष्ण दर्शन', and 'वृद्धाश्रम' are displayed beneath each respective cover",
+        "The layout is a responsive grid consistent with the existing About page design"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/About.tsx",
+          "operation": "modify",
+          "description": "Update the 'Books by Our Founder' sub-section to display 4 book cards instead of 3. Replace existing book cover image paths with frontend/public/assets/generated/book-cover-01.jpeg (labeled 'गंगा की वाणी'), frontend/public/assets/generated/book-cover-02.jpeg (labeled 'मन के मोती'), frontend/public/assets/generated/book-cover-03.jpeg (labeled 'श्री कृष्ण दर्शन'), and frontend/public/assets/generated/book-cover-04.dim_600x900.jpeg (labeled 'वृद्धाश्रम'). Ensure the responsive grid layout is consistent with the existing About page design and maintains visual balance with 4 items"
         }
       ]
     }
