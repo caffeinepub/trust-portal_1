@@ -1,83 +1,43 @@
 {
   "kind": "build_request",
-  "title": "Replace book cover photos with 4 newly uploaded book covers",
+  "title": "Revert book cover photos to original versions",
   "projectName": "Manavdeep Seva Trust",
-  "priority": "normal",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-66",
-      "text": "Store the 4 newly uploaded book cover photos as static assets in frontend/public/assets/generated/ with the following filenames: BOOK (1).jpeg → book-cover-01.jpeg (गंगा की वाणी), BOOK (2).jpeg → book-cover-02.jpeg (मन के मोती), BOOK (3).jpeg → book-cover-03.jpeg (श्री कृष्ण दर्शन), BOOK (4).jpeg → book-cover-04.jpeg (वृद्धाश्रम). These replace any existing book cover files.",
+      "id": "REQ-69",
+      "text": "Restore the original book cover static assets in frontend/public/assets/generated/ by reverting book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg, and book-cover-04.jpeg to the versions that existed before Version 25 replaced them. The correct originals are the user-uploaded BOOK (1).jpeg through BOOK (4).jpeg files: book-cover-01.jpeg = गंगा की वाणी, book-cover-02.jpeg = मन के मोती, book-cover-03.jpeg = श्री कृष्ण दर्शन, book-cover-04.jpeg = वृद्धाश्रम. Do not alter the image content — only restore the original uploaded files.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-1"
         ],
         "quotes": [
-          "DIYE HUWE BOOK KI PHOTOS KI JAGAH PE IN PHOTOS KO DALE"
+          "GIVE THE ORIGINAL BOOK COVERS DONT CHANGE THE COVER PHOTOS"
         ]
       },
       "acceptanceCriteria": [
-        "book-cover-01.jpeg in frontend/public/assets/generated/ shows the 'गंगा की वाणी' cover (Ganga goddess imagery)",
-        "book-cover-02.jpeg in frontend/public/assets/generated/ shows the 'मन के मोती' cover (maroon/yellow with Krishna)",
-        "book-cover-03.jpeg in frontend/public/assets/generated/ shows the 'श्री कृष्ण दर्शन' cover (Krishna with cosmic form)",
-        "book-cover-04.jpeg in frontend/public/assets/generated/ shows the 'वृद्धाश्रम' cover (two elderly figures)"
-      ]
-    },
-    {
-      "id": "REQ-67",
-      "text": "Update the 'Books by Our Founder' sub-section on the Home page (frontend/src/pages/Home.tsx) to display 4 book cards: book-cover-01.jpeg labeled 'गंगा की वाणी', book-cover-02.jpeg labeled 'मन के मोती', book-cover-03.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-04.jpeg labeled 'वृद्धाश्रम'. Replace the existing 3-book layout with this 4-book layout.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ],
-        "quotes": [
-          "DIYE HUWE BOOK KI PHOTOS KI JAGAH PE IN PHOTOS KO DALE"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The 'Books by Our Founder' section on the Home page shows exactly 4 book cards",
-        "Each card displays the correct new cover image from /assets/generated/",
-        "Book titles 'गंगा की वाणी', 'मन के मोती', 'श्री कृष्ण दर्शन', and 'वृद्धाश्रम' are displayed beneath each respective cover",
-        "The layout is responsive (grid or horizontal scroll) and consistent with the existing warm earthy design theme"
-      ]
-    },
-    {
-      "id": "REQ-68",
-      "text": "Update the 'Books by Our Founder' sub-section on the About page (frontend/src/pages/About.tsx) to display 4 book cards: book-cover-01.jpeg labeled 'गंगा की वाणी', book-cover-02.jpeg labeled 'मन के मोती', book-cover-03.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-04.jpeg labeled 'वृद्धाश्रम'. Replace the existing 3-book layout with this 4-book layout.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ],
-        "quotes": [
-          "DIYE HUWE BOOK KI PHOTOS KI JAGAH PE IN PHOTOS KO DALE"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The 'Books by Our Founder' section on the About page shows exactly 4 book cards",
-        "Each card displays the correct new cover image from /assets/generated/",
-        "Book titles 'गंगा की वाणी', 'मन के मोती', 'श्री कृष्ण दर्शन', and 'वृद्धाश्रम' are displayed beneath each respective cover",
-        "The layout is a responsive grid consistent with the existing About page design"
+        "book-cover-01.jpeg in frontend/public/assets/generated/ matches the original BOOK (1).jpeg (गंगा की वाणी) uploaded by the user",
+        "book-cover-02.jpeg in frontend/public/assets/generated/ matches the original BOOK (2).jpeg (मन के मोती) uploaded by the user",
+        "book-cover-03.jpeg in frontend/public/assets/generated/ matches the original BOOK (3).jpeg (श्री कृष्ण दर्शन) uploaded by the user",
+        "book-cover-04.jpeg in frontend/public/assets/generated/ matches the original BOOK (4).jpeg (वृद्धाश्रम) uploaded by the user",
+        "The 'Books by Our Founder' section on Home page and About page display the correct original cover images without any AI-generated replacements",
+        "No other files or UI code are modified"
       ]
     }
   ],
   "constraints": [
-    "Do not remove or alter any other content in the founder section on Home or About pages",
-    "The new book-cover-04.jpeg must be added as an additional asset — do not remove any existing gallery or other assets"
+    "Do not alter any book titles or labels in Home.tsx or About.tsx",
+    "Do not modify any other static assets or page content",
+    "Only the image file content of book-cover-01.jpeg through book-cover-04.jpeg should be restored — no code changes required"
   ],
   "nonGoals": [
-    "Changes to the Gallery page",
-    "Changes to the backend",
-    "Changes to navigation, footer, or other pages"
+    "Changing book titles or labels on Home or About pages",
+    "Adding new book covers or removing existing ones",
+    "Modifying any other gallery or page content"
   ],
   "imageRequirements": {
     "required": [],
-    "edits": [
-      "Replace with uploaded BOOK (1).jpeg photo of 'गंगा की वाणी' book cover (book-cover-01.jpeg > book-cover-01.jpeg)",
-      "Replace with uploaded BOOK (2).jpeg photo of 'मन के मोती' book cover (book-cover-02.jpeg > book-cover-02.jpeg)",
-      "Replace with uploaded BOOK (3).jpeg photo of 'श्री कृष्ण दर्शन' book cover (book-cover-03.jpeg > book-cover-03.jpeg)",
-      "New book cover photo of 'वृद्धाश्रम' from uploaded BOOK (4).jpeg (book-cover-04.dim_600x900.jpeg)"
-    ]
+    "edits": []
   }
 }

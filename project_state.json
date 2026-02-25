@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 51,
+  "projectStateVersion": 53,
   "summary": "Building a website for a trust/charitable organization",
   "architectural_notes": [
     "Website project for a trust/charitable organization",
@@ -11,7 +11,6 @@
     "Photos in the gallery are not displaying properly for the user"
   ],
   "isFixRequest": true,
-  "imageRequirements": "## Edit Images\n- Replace with uploaded BOOK (1).jpeg photo of 'गंगा की वाणी' book cover (book-cover-01.jpeg > book-cover-01.jpeg)\n- Replace with uploaded BOOK (2).jpeg photo of 'मन के मोती' book cover (book-cover-02.jpeg > book-cover-02.jpeg)\n- Replace with uploaded BOOK (3).jpeg photo of 'श्री कृष्ण दर्शन' book cover (book-cover-03.jpeg > book-cover-03.jpeg)\n- New book cover photo of 'वृद्धाश्रम' from uploaded BOOK (4).jpeg (book-cover-04.dim_600x900.jpeg)",
   "existing_features": [
     {
       "id": "feature-create-a-homepage-with-a-hero-section-introducing-the-trust-its-mission-statement-and-key-highlights",
@@ -689,6 +688,20 @@
       "id": "AR-35",
       "summary": "Restore the 'Books by Our Founder' sub-section on both Home and About pages - only the photo gallery (director's 3 photos) should be removed, not the book covers section",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-36",
+      "summary": "Revert book cover photos to the original versions - undo the recent replacement of book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg with new photos",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-37",
+      "summary": "Restore the original book cover static assets in frontend/public/assets/generated/ by reverting book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg, and book-cover-04.jpeg to the versions that existed before Version 25 replaced them. The correct originals are the user-uploaded BOOK (1).jpeg through BOOK (4).jpeg files: book-cover-01.jpeg = गंगा की वाणी, book-cover-02.jpeg = मन के मोती, book-cover-03.jpeg = श्री कृष्ण दर्शन, book-cover-04.jpeg = वृद्धाश्रम. Do not alter the image content — only restore the original uploaded files.",
+      "reqIds": [
+        "REQ-69"
+      ],
       "status": "pending"
     }
   ],

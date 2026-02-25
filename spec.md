@@ -1,11 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the existing 3 book cover images with 4 newly uploaded real book cover photos and update the books section on both the Home and About pages to show all 4 books.
+**Goal:** Restore the original user-uploaded book cover images for the four books displayed on the site, replacing any AI-generated versions.
 
 **Planned changes:**
-- Save the 4 uploaded book cover photos as static assets: `book-cover-01.jpeg` (गंगा की वाणी), `book-cover-02.jpeg` (मन के मोती), `book-cover-03.jpeg` (श्री कृष्ण दर्शन), and `book-cover-04.jpeg` (वृद्धाश्रम)
-- Update the "Books by Our Founder" section on the Home page to display 4 book cards using the new cover images with correct Hindi titles
-- Update the "Books by Our Founder" section on the About page to display 4 book cards using the new cover images with correct Hindi titles
+- Replace book-cover-01.jpeg with the original BOOK (1).jpeg (गंगा की वाणी)
+- Replace book-cover-02.jpeg with the original BOOK (2).jpeg (मन के मोती)
+- Replace book-cover-03.jpeg with the original BOOK (3).jpeg (श्री कृष्ण दर्शन)
+- Replace book-cover-04.jpeg with the original BOOK (4).jpeg (वृद्धाश्रम)
 
-**User-visible outcome:** The books section on both the Home and About pages shows all 4 real book covers — गंगा की वाणी, मन के मोती, श्री कृष्ण दर्शन, and वृद्धाश्रम — in a responsive layout.
+**User-visible outcome:** The "Books by Our Founder" section on the Home and About pages displays the correct original book cover photos as uploaded by the user, with no AI-generated replacements.

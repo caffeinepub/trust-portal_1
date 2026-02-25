@@ -1,52 +1,26 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T05:39:32.436Z",
+  "generatedAt": "2026-02-25T05:46:23.810Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 3,
+    "total": 1,
+    "implemented": 0,
     "items": [
       {
-        "id": "REQ-66",
-        "summary": "Store the 4 newly uploaded book cover photos as static assets in frontend/public/assets/generated/ with the following filenames: BOOK (1).jpeg → book-cover-01.jpeg (गंगा की वाणी), BOOK (2).jpeg → book-cover-02.jpeg (मन के मोती), BOOK (3).jpeg → book-cover-03.jpeg (श्री कृष्ण दर्शन), BOOK (4).jpeg → book-cover-04.jpeg (वृद्धाश्रम). These replace any existing book cover files.",
-        "status": "implemented",
+        "id": "REQ-69",
+        "summary": "Restore the original book cover static assets in frontend/public/assets/generated/ by reverting book-cover-01.jpeg, book-cover-02.jpeg, book-cover-03.jpeg, and book-cover-04.jpeg to the versions that existed before Version 25 replaced them. The correct originals are the user-uploaded BOOK (1).jpeg through BOOK (4).jpeg files: book-cover-01.jpeg = गंगा की वाणी, book-cover-02.jpeg = मन के मोती, book-cover-03.jpeg = श्री कृष्ण दर्शन, book-cover-04.jpeg = वृद्धाश्रम. Do not alter the image content — only restore the original uploaded files.",
+        "status": "missing",
         "plannedFiles": [
           "frontend/public/assets/generated/book-cover-01.jpeg",
           "frontend/public/assets/generated/book-cover-02.jpeg",
           "frontend/public/assets/generated/book-cover-03.jpeg",
-          "frontend/public/assets/generated/book-cover-04.dim_600x900.jpeg"
+          "frontend/public/assets/generated/book-cover-04.jpeg"
         ],
-        "matchedFiles": [
-          "frontend/public/assets/generated/book-cover-01.jpeg",
-          "frontend/public/assets/generated/book-cover-02.jpeg",
-          "frontend/public/assets/generated/book-cover-03.jpeg"
-        ]
-      },
-      {
-        "id": "REQ-67",
-        "summary": "Update the 'Books by Our Founder' sub-section on the Home page (frontend/src/pages/Home.tsx) to display 4 book cards: book-cover-01.jpeg labeled 'गंगा की वाणी', book-cover-02.jpeg labeled 'मन के मोती', book-cover-03.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-04.jpeg labeled 'वृद्धाश्रम'. Replace the existing 3-book layout with this 4-book layout.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/Home.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/Home.tsx"
-        ]
-      },
-      {
-        "id": "REQ-68",
-        "summary": "Update the 'Books by Our Founder' sub-section on the About page (frontend/src/pages/About.tsx) to display 4 book cards: book-cover-01.jpeg labeled 'गंगा की वाणी', book-cover-02.jpeg labeled 'मन के मोती', book-cover-03.jpeg labeled 'श्री कृष्ण दर्शन', and book-cover-04.jpeg labeled 'वृद्धाश्रम'. Replace the existing 3-book layout with this 4-book layout.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/About.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/About.tsx"
-        ]
+        "matchedFiles": []
       }
     ]
   },
@@ -55,9 +29,6 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/book-cover-01.jpeg",
-    "frontend/public/assets/generated/book-cover-02.jpeg",
-    "frontend/public/assets/generated/book-cover-03.jpeg",
     "frontend/src/pages/About.tsx",
     "frontend/src/pages/Home.tsx",
     "project_state.json",

@@ -1,71 +1,39 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace book cover photos with 4 newly uploaded book covers",
+  "title": "Revert book cover photos to original versions",
   "requirements": [
     {
-      "id": "REQ-66",
-      "summary": "Store the 4 newly uploaded book cover photos as static assets with standardized filenames",
+      "id": "REQ-69",
+      "summary": "Restore original book cover static assets by reverting book-cover-01.jpeg through book-cover-04.jpeg in frontend/public/assets/generated/ to the user-uploaded originals (BOOK (1).jpeg = गंगा की वाणी, BOOK (2).jpeg = मन के मोती, BOOK (3).jpeg = श्री कृष्ण दर्शन, BOOK (4).jpeg = वृद्धाश्रम) without altering image content or UI code",
       "acceptanceCriteria": [
-        "book-cover-01.jpeg in frontend/public/assets/generated/ shows the 'गंगा की वाणी' cover (Ganga goddess imagery)",
-        "book-cover-02.jpeg in frontend/public/assets/generated/ shows the 'मन के मोती' cover (maroon/yellow with Krishna)",
-        "book-cover-03.jpeg in frontend/public/assets/generated/ shows the 'श्री कृष्ण दर्शन' cover (Krishna with cosmic form)",
-        "book-cover-04.jpeg in frontend/public/assets/generated/ shows the 'वृद्धाश्रम' cover (two elderly figures)"
+        "book-cover-01.jpeg in frontend/public/assets/generated/ matches the original BOOK (1).jpeg (गंगा की वाणी) uploaded by the user",
+        "book-cover-02.jpeg in frontend/public/assets/generated/ matches the original BOOK (2).jpeg (मन के मोती) uploaded by the user",
+        "book-cover-03.jpeg in frontend/public/assets/generated/ matches the original BOOK (3).jpeg (श्री कृष्ण दर्शन) uploaded by the user",
+        "book-cover-04.jpeg in frontend/public/assets/generated/ matches the original BOOK (4).jpeg (वृद्धाश्रम) uploaded by the user",
+        "The 'Books by Our Founder' section on Home page and About page display the correct original cover images without any AI-generated replacements",
+        "No other files or UI code are modified"
       ],
       "file_operations": [
         {
           "path": "frontend/public/assets/generated/book-cover-01.jpeg",
-          "operation": "create",
-          "description": "Add the 'गंगा की वाणी' book cover photo (uploaded as BOOK (1).jpeg) showing Ganga goddess imagery with dark background and ornate crown"
+          "operation": "modify",
+          "description": "Replace the current file content with the original BOOK (1).jpeg (गंगा की वाणी) uploaded by the user. This file is referenced in Home.tsx and About.tsx as /assets/generated/book-cover-01.jpeg and must match the original user-uploaded version exactly."
         },
         {
           "path": "frontend/public/assets/generated/book-cover-02.jpeg",
-          "operation": "create",
-          "description": "Add the 'मन के मोती' book cover photo (uploaded as BOOK (2).jpeg) showing maroon/yellow design with Krishna imagery in a circle and bird motif"
+          "operation": "modify",
+          "description": "Replace the current file content with the original BOOK (2).jpeg (मन के मोती) uploaded by the user. This file is referenced in Home.tsx and About.tsx as /assets/generated/book-cover-02.jpeg and must match the original user-uploaded version exactly."
         },
         {
           "path": "frontend/public/assets/generated/book-cover-03.jpeg",
-          "operation": "create",
-          "description": "Add the 'श्री कृष्ण दर्शन' book cover photo (uploaded as BOOK (3).jpeg) showing Krishna with cosmic form and multiple divine figures in an oval frame"
+          "operation": "modify",
+          "description": "Replace the current file content with the original BOOK (3).jpeg (श्री कृष्ण दर्शन) uploaded by the user. This file is referenced in Home.tsx and About.tsx as /assets/generated/book-cover-03.jpeg and must match the original user-uploaded version exactly."
         },
         {
-          "path": "frontend/public/assets/generated/book-cover-04.dim_600x900.jpeg",
-          "operation": "create",
-          "description": "Add the 'वृद्धाश्रम' book cover photo (uploaded as BOOK (4).jpeg) showing two elderly figures in warm sepia tones with a reflective scene"
-        }
-      ]
-    },
-    {
-      "id": "REQ-67",
-      "summary": "Update the 'Books by Our Founder' section on Home page to display 4 book cards with new cover images",
-      "acceptanceCriteria": [
-        "The 'Books by Our Founder' section on the Home page shows exactly 4 book cards",
-        "Each card displays the correct new cover image from /assets/generated/",
-        "Book titles 'गंगा की वाणी', 'मन के मोती', 'श्री कृष्ण दर्शन', and 'वृद्धाश्रम' are displayed beneath each respective cover",
-        "The layout is responsive (grid or horizontal scroll) and consistent with the existing warm earthy design theme"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/Home.tsx",
+          "path": "frontend/public/assets/generated/book-cover-04.jpeg",
           "operation": "modify",
-          "description": "Update the 'Books by Our Founder' sub-section to display 4 book cards instead of 3. Replace existing book cover image paths with frontend/public/assets/generated/book-cover-01.jpeg (labeled 'गंगा की वाणी'), frontend/public/assets/generated/book-cover-02.jpeg (labeled 'मन के मोती'), frontend/public/assets/generated/book-cover-03.jpeg (labeled 'श्री कृष्ण दर्शन'), and frontend/public/assets/generated/book-cover-04.dim_600x900.jpeg (labeled 'वृद्धाश्रम'). Ensure the layout is responsive and maintains the existing warm earthy design theme with proper grid or horizontal scroll for 4 items"
-        }
-      ]
-    },
-    {
-      "id": "REQ-68",
-      "summary": "Update the 'Books by Our Founder' section on About page to display 4 book cards with new cover images",
-      "acceptanceCriteria": [
-        "The 'Books by Our Founder' section on the About page shows exactly 4 book cards",
-        "Each card displays the correct new cover image from /assets/generated/",
-        "Book titles 'गंगा की वाणी', 'मन के मोती', 'श्री कृष्ण दर्शन', and 'वृद्धाश्रम' are displayed beneath each respective cover",
-        "The layout is a responsive grid consistent with the existing About page design"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/About.tsx",
-          "operation": "modify",
-          "description": "Update the 'Books by Our Founder' sub-section to display 4 book cards instead of 3. Replace existing book cover image paths with frontend/public/assets/generated/book-cover-01.jpeg (labeled 'गंगा की वाणी'), frontend/public/assets/generated/book-cover-02.jpeg (labeled 'मन के मोती'), frontend/public/assets/generated/book-cover-03.jpeg (labeled 'श्री कृष्ण दर्शन'), and frontend/public/assets/generated/book-cover-04.dim_600x900.jpeg (labeled 'वृद्धाश्रम'). Ensure the responsive grid layout is consistent with the existing About page design and maintains visual balance with 4 items"
+          "description": "Replace the current file content with the original BOOK (4).jpeg (वृद्धाश्रम) uploaded by the user. This file is currently missing from the Books by Our Founder section but was part of the original set and should be restored to frontend/public/assets/generated/book-cover-04.jpeg."
         }
       ]
     }

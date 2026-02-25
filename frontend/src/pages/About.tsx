@@ -2,15 +2,15 @@ import { Target, Award, Heart, User, Phone, BookOpen } from 'lucide-react';
 
 const founderBooks = [
   {
-    src: '/assets/generated/book-cover-01.jpeg',
+    src: '/assets/BOOK (1).jpeg',
     title: 'गंगा की वाणी',
   },
   {
-    src: '/assets/generated/book-cover-02.jpeg',
+    src: '/assets/BOOK (2).jpeg',
     title: 'मन के मोती',
   },
   {
-    src: '/assets/generated/book-cover-03.jpeg',
+    src: '/assets/BOOK (3).jpeg',
     title: 'श्री कृष्ण दर्शन',
   },
   {
@@ -192,21 +192,21 @@ export default function About() {
           <div className="mx-auto max-w-4xl">
             <div className="mb-8 flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                <Heart className="h-6 w-6 text-primary" />
+                <Target className="h-6 w-6 text-primary" />
               </div>
               <h2 className="text-3xl font-bold text-primary">Our Story</h2>
             </div>
             <div className="prose prose-lg max-w-none text-foreground">
-              <p className="mb-4 leading-relaxed text-foreground">
+              <p className="mb-4 leading-relaxed">
                 Manavdeep Seva Trust was founded with a vision to serve humanity and create a society where every
                 individual has access to basic necessities, education, and opportunities for growth. Rooted in the
-                ancient Indian principle of "Manav Seva Paramo Dharma" (Service to humanity is the highest duty), the
-                trust has been working tirelessly to uplift communities across Uttar Pradesh.
+                belief that "मानव सेवा परमो धर्मः" (Service to humanity is the highest duty), the trust has been
+                working tirelessly to uplift communities across Uttar Pradesh.
               </p>
-              <p className="leading-relaxed text-foreground">
-                From humble beginnings in Deoria, the trust has grown into a multifaceted organization addressing
-                critical social issues including education for underprivileged children, women empowerment, elder care,
-                environmental conservation, and community health initiatives.
+              <p className="leading-relaxed">
+                From humble beginnings in Deoria, the trust has grown into a recognized organization that touches
+                thousands of lives through its diverse programs spanning education, healthcare, women empowerment,
+                elder care, and environmental conservation.
               </p>
             </div>
           </div>
@@ -217,53 +217,38 @@ export default function About() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <div className="mb-8 flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-nature/10">
-                <Target className="h-6 w-6 text-nature" />
-              </div>
-              <h2 className="text-3xl font-bold text-primary">Vision & Values</h2>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-xl border border-border/60 bg-card p-6 shadow-sm">
-                <h3 className="mb-3 text-xl font-semibold text-foreground">Our Vision</h3>
-                <p className="leading-relaxed text-muted-foreground">
-                  A society where every individual lives with dignity, has access to education and healthcare, and
-                  contributes meaningfully to community development and environmental sustainability.
+            <h2 className="mb-12 text-center text-3xl font-bold text-primary">Our Vision & Values</h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-trust/10">
+                  <Heart className="h-7 w-7 text-trust" />
+                </div>
+                <h3 className="mb-3 text-lg font-semibold text-card-foreground">Compassion</h3>
+                <p className="text-sm text-muted-foreground">
+                  Serving every individual with empathy, dignity, and unconditional care regardless of background or
+                  circumstance.
                 </p>
               </div>
-              <div className="rounded-xl border border-border/60 bg-card p-6 shadow-sm">
-                <h3 className="mb-3 text-xl font-semibold text-foreground">Our Mission</h3>
-                <p className="leading-relaxed text-muted-foreground">
-                  To empower communities through sustainable initiatives, education, and compassionate service,
-                  creating opportunities that foster growth, dignity, and hope for all individuals.
+
+              <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                  <Target className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="mb-3 text-lg font-semibold text-card-foreground">Purpose</h3>
+                <p className="text-sm text-muted-foreground">
+                  Every initiative is driven by a clear mission to create sustainable, long-lasting positive change in
+                  the communities we serve.
                 </p>
               </div>
-              <div className="rounded-xl border border-border/60 bg-card p-6 shadow-sm">
-                <h3 className="mb-3 text-xl font-semibold text-foreground">Core Values</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                    Compassion & Empathy
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                    Integrity & Transparency
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                    Community Empowerment
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                    Sustainable Development
-                  </li>
-                </ul>
-              </div>
-              <div className="rounded-xl border border-border/60 bg-card p-6 shadow-sm">
-                <h3 className="mb-3 text-xl font-semibold text-foreground">Our Approach</h3>
-                <p className="leading-relaxed text-muted-foreground">
-                  We believe in grassroots-level change, working directly with communities to understand their needs
-                  and co-create solutions that are sustainable, culturally sensitive, and impactful.
+
+              <div className="rounded-xl border border-border bg-card p-6 text-center transition-shadow hover:shadow-lg">
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-nature/10">
+                  <Award className="h-7 w-7 text-nature" />
+                </div>
+                <h3 className="mb-3 text-lg font-semibold text-card-foreground">Integrity</h3>
+                <p className="text-sm text-muted-foreground">
+                  Operating with full transparency, accountability, and ethical standards in all our programs and
+                  financial dealings.
                 </p>
               </div>
             </div>

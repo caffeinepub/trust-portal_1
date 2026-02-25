@@ -3,15 +3,15 @@ import { Heart, Users, Leaf, ArrowRight, Award, BookOpen } from 'lucide-react';
 
 const founderBooks = [
   {
-    src: '/assets/generated/book-cover-01.jpeg',
+    src: '/assets/BOOK (1).jpeg',
     title: 'गंगा की वाणी',
   },
   {
-    src: '/assets/generated/book-cover-02.jpeg',
+    src: '/assets/BOOK (2).jpeg',
     title: 'मन के मोती',
   },
   {
-    src: '/assets/generated/book-cover-03.jpeg',
+    src: '/assets/BOOK (3).jpeg',
     title: 'श्री कृष्ण दर्शन',
   },
   {
