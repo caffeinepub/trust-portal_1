@@ -1,11 +1,22 @@
-# Specification
+# Manavdeep Seva Trust
 
-## Summary
-**Goal:** Fix the Awards & Recognition section on both the About and Home pages so that all 7 award photos display correctly.
+## Current State
+The website has a photo/video gallery with an Admin panel. Photos can be uploaded via Admin page, but `uploadPhoto` and `uploadVideo` require the caller to have `#admin` permission in the access control system. There is no way for the owner to self-assign admin role, so uploads always fail with "Unauthorized".
 
-**Planned changes:**
-- Rewrite the awards rendering block in `About.tsx` to use fully hardcoded literal `src` paths for all 7 award photos (award-photo-01, 02, 04, 05, 06, 07, 08), removing any template literals, dynamic src construction, lazy loading, inline event handlers, and conditional rendering
-- Rewrite the awards rendering block in `Home.tsx` with the same approach — hardcoded literal src paths, no template literals, no conditional or lazy rendering — while keeping the founder profile, books section, and all other content intact
-- Ensure no reference to award-photo-03.jpeg exists in either component
+## Requested Changes (Diff)
 
-**User-visible outcome:** All 7 award photos are fully visible in the Awards & Recognition section on both the Home and About pages.
+### Add
+- Auto-assign admin role to the first caller who interacts with the canister (owner bootstrap)
+- A `claimAdmin` public function so the first person to call it becomes admin
+
+### Modify
+- `uploadPhoto` and `uploadVideo`: allow any authenticated (non-anonymous) user to upload, not just admins — so the owner can upload after logging in
+- `deletePhoto` and `deleteVideo`: keep admin-only restriction
+
+### Remove
+- Nothing
+
+## Implementation Plan
+1. In `main.mo`, change `uploadPhoto` and `uploadVideo` checks from `#admin` to simply rejecting anonymous callers (Principal.isAnonymous check)
+2. Add a `claimAdmin` function that assigns the caller as admin if no admin exists yet
+3. Keep delete operations admin-only

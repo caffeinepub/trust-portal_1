@@ -1,14 +1,35 @@
-import { Link } from '@tanstack/react-router';
-import { Heart, HandHeart, Users, Leaf, CreditCard, Building2, Smartphone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Link } from "@tanstack/react-router";
+import {
+  Building2,
+  CreditCard,
+  HandHeart,
+  Heart,
+  Info,
+  Leaf,
+  Smartphone,
+  Users,
+} from "lucide-react";
 
 export default function Donations() {
   const donationAmounts = [
-    { amount: 500, impact: 'Provides educational materials for 5 children' },
-    { amount: 1000, impact: 'Supports a family with essential supplies for a month' },
-    { amount: 2500, impact: 'Funds a community health camp' },
-    { amount: 5000, impact: 'Sponsors skill development training for 10 individuals' },
+    { amount: 500, impact: "Provides educational materials for 5 children" },
+    {
+      amount: 1000,
+      impact: "Supports a family with essential supplies for a month",
+    },
+    { amount: 2500, impact: "Funds a community health camp" },
+    {
+      amount: 5000,
+      impact: "Sponsors skill development training for 10 individuals",
+    },
   ];
 
   return (
@@ -28,8 +49,9 @@ export default function Donations() {
               Your Generosity Changes Lives
             </h1>
             <p className="mb-8 text-lg text-muted-foreground md:text-xl">
-              Every donation to Manavdeep Seva Trust helps us continue our mission of serving communities,
-              protecting the environment, and empowering individuals to build better futures.
+              Every donation to Manavdeep Seva Trust helps us continue our
+              mission of serving communities, protecting the environment, and
+              empowering individuals to build better futures.
             </p>
           </div>
         </div>
@@ -38,7 +60,9 @@ export default function Donations() {
       {/* Impact Section */}
       <section className="border-y border-border/40 bg-muted/30 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold text-primary">Your Impact</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold text-primary">
+            Your Impact
+          </h2>
           <div className="grid gap-8 md:grid-cols-4">
             <div className="text-center">
               <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-trust/10">
@@ -52,21 +76,27 @@ export default function Donations() {
                 <Leaf className="h-8 w-8 text-nature" />
               </div>
               <h3 className="mb-2 text-2xl font-bold text-foreground">50+</h3>
-              <p className="text-sm text-muted-foreground">Environmental Projects</p>
+              <p className="text-sm text-muted-foreground">
+                Environmental Projects
+              </p>
             </div>
             <div className="text-center">
               <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                 <Users className="h-8 w-8 text-primary" />
               </div>
               <h3 className="mb-2 text-2xl font-bold text-foreground">200+</h3>
-              <p className="text-sm text-muted-foreground">Families Supported</p>
+              <p className="text-sm text-muted-foreground">
+                Families Supported
+              </p>
             </div>
             <div className="text-center">
               <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-trust/10">
                 <HandHeart className="h-8 w-8 text-trust" />
               </div>
               <h3 className="mb-2 text-2xl font-bold text-foreground">100+</h3>
-              <p className="text-sm text-muted-foreground">Community Programs</p>
+              <p className="text-sm text-muted-foreground">
+                Community Programs
+              </p>
             </div>
           </div>
         </div>
@@ -76,16 +106,24 @@ export default function Donations() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold text-primary">Choose Your Contribution</h2>
+            <h2 className="mb-4 text-center text-3xl font-bold text-primary">
+              Choose Your Contribution
+            </h2>
             <p className="mb-12 text-center text-muted-foreground">
-              Select an amount or enter a custom donation to support our initiatives
+              Select an amount or enter a custom donation to support our
+              initiatives
             </p>
 
             <div className="grid gap-6 md:grid-cols-2">
               {donationAmounts.map((option) => (
-                <Card key={option.amount} className="transition-shadow hover:shadow-lg">
+                <Card
+                  key={option.amount}
+                  className="transition-shadow hover:shadow-lg"
+                >
                   <CardHeader>
-                    <CardTitle className="text-2xl">₹{option.amount.toLocaleString('en-IN')}</CardTitle>
+                    <CardTitle className="text-2xl">
+                      ₹{option.amount.toLocaleString("en-IN")}
+                    </CardTitle>
                     <CardDescription>{option.impact}</CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -100,7 +138,9 @@ export default function Donations() {
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Custom Amount</CardTitle>
-                <CardDescription>Enter any amount you wish to contribute</CardDescription>
+                <CardDescription>
+                  Enter any amount you wish to contribute
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex gap-4">
@@ -121,7 +161,9 @@ export default function Donations() {
       <section className="border-t border-border/40 bg-muted/30 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center text-3xl font-bold text-primary">Payment Details</h2>
+            <h2 className="mb-4 text-center text-3xl font-bold text-primary">
+              Payment Details
+            </h2>
             <p className="mb-12 text-center text-muted-foreground">
               You can make your donation through bank transfer or UPI
             </p>
@@ -134,28 +176,50 @@ export default function Donations() {
                     <Building2 className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle>Bank Transfer</CardTitle>
-                  <CardDescription>Direct bank account transfer</CardDescription>
+                  <CardDescription>
+                    Direct bank account transfer
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">Account Name</p>
-                    <p className="text-base font-semibold text-foreground">Manavdeep Seva Trust</p>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      Account Name
+                    </p>
+                    <p className="text-base font-semibold text-foreground">
+                      Manavdeep Seva Trust
+                    </p>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">Account Number</p>
-                    <p className="text-base font-semibold text-foreground">1234567890</p>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      Account Number
+                    </p>
+                    <p className="text-base font-semibold text-foreground">
+                      1234567890
+                    </p>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">IFSC Code</p>
-                    <p className="text-base font-semibold text-foreground">SBIN0001234</p>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      IFSC Code
+                    </p>
+                    <p className="text-base font-semibold text-foreground">
+                      SBIN0001234
+                    </p>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">Bank Name</p>
-                    <p className="text-base font-semibold text-foreground">State Bank of India</p>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      Bank Name
+                    </p>
+                    <p className="text-base font-semibold text-foreground">
+                      State Bank of India
+                    </p>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">Branch</p>
-                    <p className="text-base font-semibold text-foreground">Main Branch, Delhi</p>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      Branch
+                    </p>
+                    <p className="text-base font-semibold text-foreground">
+                      Main Branch, Delhi
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -171,35 +235,54 @@ export default function Donations() {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">UPI ID</p>
-                    <p className="text-base font-semibold text-foreground">manavdeeptrust@upi</p>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      UPI ID
+                    </p>
+                    <p className="text-base font-semibold text-foreground">
+                      manavdeeptrust@upi
+                    </p>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">Payment Apps</p>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      Payment Apps
+                    </p>
                     <p className="text-sm text-muted-foreground">
                       Google Pay, PhonePe, Paytm, or any UPI-enabled app
                     </p>
                   </div>
                   <div className="mt-6 rounded-lg border border-border bg-background p-4">
-                    <p className="text-sm font-medium text-foreground">Scan QR Code</p>
+                    <p className="text-sm font-medium text-foreground">
+                      Scan QR Code
+                    </p>
                     <div className="mt-3 flex h-32 items-center justify-center rounded-md bg-muted">
                       <CreditCard className="h-12 w-12 text-muted-foreground" />
                     </div>
-                    <p className="mt-2 text-xs text-muted-foreground">QR code for UPI payment</p>
+                    <p className="mt-2 text-xs text-muted-foreground">
+                      QR code for UPI payment
+                    </p>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="mt-8 rounded-lg border border-border bg-card p-6 text-center">
-              <p className="text-sm text-muted-foreground">
-                After making your donation, please send the transaction details to{' '}
-                <a href="tel:9651044109" className="font-medium text-primary hover:underline">
+            {/* Transaction Details Notice */}
+            <div className="mt-8 flex items-start gap-3 rounded-lg border border-primary/30 bg-primary/5 p-5 text-center shadow-sm">
+              <Info className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <p className="text-sm text-foreground md:text-base">
+                After making your donation, please send the transaction details
+                to{" "}
+                <a
+                  href="tel:9651044109"
+                  className="font-semibold text-primary hover:underline"
+                >
                   9651044109
-                </a>{' '}
-                or email us at{' '}
-                <a href="mailto:info@manavdeeptrust.org" className="font-medium text-primary hover:underline">
-                  info@manavdeeptrust.org
+                </a>{" "}
+                or email us at{" "}
+                <a
+                  href="mailto:manavdeepsevatrust@gmail.com"
+                  className="font-semibold text-primary hover:underline"
+                >
+                  manavdeepsevatrust@gmail.com
                 </a>
               </p>
             </div>
@@ -210,9 +293,12 @@ export default function Donations() {
       {/* Call to Action */}
       <section className="bg-gradient-to-br from-primary/5 to-trust/5 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-primary">Have Questions?</h2>
+          <h2 className="mb-4 text-3xl font-bold text-primary">
+            Have Questions?
+          </h2>
           <p className="mb-8 text-lg text-muted-foreground">
-            Our team is here to help you with any queries about donations or our programs.
+            Our team is here to help you with any queries about donations or our
+            programs.
           </p>
           <Link to="/contact">
             <Button size="lg">Contact Us</Button>
