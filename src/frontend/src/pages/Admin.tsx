@@ -22,6 +22,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Image as ImageIcon,
+  Info,
   Loader2,
   Trash2,
   Upload,
@@ -164,7 +165,7 @@ export default function Admin() {
 
   if (!isAuthenticated) {
     return (
-      <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-4">
+      <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 py-8">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Admin Panel</CardTitle>
@@ -177,7 +178,7 @@ export default function Admin() {
               </span>
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex justify-center">
+          <CardContent className="flex flex-col items-center gap-6">
             <Button
               data-ocid="admin.login.button"
               onClick={login}
@@ -193,6 +194,59 @@ export default function Admin() {
                 "Login"
               )}
             </Button>
+
+            {/* Helper info card for custom domain issues */}
+            <div
+              className="w-full rounded-lg border border-blue-200 bg-blue-50 p-4 text-sm dark:border-blue-800 dark:bg-blue-950"
+              data-ocid="admin.domain.panel"
+            >
+              <div className="mb-2 flex items-center gap-2 font-semibold text-blue-700 dark:text-blue-300">
+                <Info className="h-4 w-4 shrink-0" />
+                <span>Admin Panel नहीं खुल रहा?</span>
+              </div>
+              <p className="mb-3 text-blue-700 dark:text-blue-300">
+                अगर website का link काम नहीं कर रहा, तो नीचे दिए steps follow करें:
+              </p>
+              <ol className="space-y-1.5 text-blue-600 dark:text-blue-400">
+                <li className="flex gap-2">
+                  <span className="shrink-0 font-bold">1.</span>
+                  <span>
+                    <strong>caffeine.ai</strong> पर जाएं और अपने account में login
+                    करें
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="shrink-0 font-bold">2.</span>
+                  <span>
+                    अपना project <strong>&quot;Trust Portal&quot;</strong> खोलें
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="shrink-0 font-bold">3.</span>
+                  <span>
+                    ऊपर <strong>Preview</strong> button दबाएं — एक नया link खुलेगा
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="shrink-0 font-bold">4.</span>
+                  <span>
+                    उस link के अंत में{" "}
+                    <strong className="rounded bg-blue-100 px-1 font-mono text-xs dark:bg-blue-900">
+                      /admin
+                    </strong>{" "}
+                    लगाएं और वहाँ से login करें
+                  </span>
+                </li>
+              </ol>
+              <a
+                href="https://caffeine.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-1 font-medium text-blue-700 underline underline-offset-2 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-100"
+              >
+                caffeine.ai पर जाएं →
+              </a>
+            </div>
           </CardContent>
         </Card>
       </div>
