@@ -292,6 +292,32 @@ export default function Gallery() {
                 </div>
               ) : (
                 <div className="space-y-12">
+                  {/* ── Birthday Celebration Event Highlight Section ── */}
+                  <div className="rounded-2xl border border-yellow-300/40 bg-gradient-to-br from-yellow-50/60 via-background to-orange-50/40 p-6 shadow-md md:p-8">
+                    {/* Section header */}
+                    <div className="mb-6 flex items-start gap-3">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-yellow-400/20 text-yellow-600">
+                        <Sparkles className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <span className="mb-1 inline-block rounded-full bg-yellow-400/20 px-3 py-0.5 text-xs font-semibold uppercase tracking-wider text-yellow-700">
+                          Event Highlight
+                        </span>
+                        <h2 className="text-xl font-bold text-foreground md:text-2xl">
+                          School के बच्चों का जन्मदिन — मानवदीप सेवा ट्रस्ट
+                        </h2>
+                      </div>
+                    </div>
+
+                    {/* Hindi descriptive text */}
+                    <div className="rounded-xl border border-border bg-card/60 p-5 text-base leading-relaxed text-foreground/90 shadow-sm">
+                      <p>
+                        मानवदीप सेवा ट्रस्ट द्वारा school के बच्चों का जन्मदिन मनाया
+                        गया।
+                      </p>
+                    </div>
+                  </div>
+
                   {/* ── Holi Event Highlight Section ── */}
                   <div className="rounded-2xl border border-trust/20 bg-gradient-to-br from-trust/5 via-background to-nature/5 p-6 shadow-md md:p-8">
                     {/* Section header */}
