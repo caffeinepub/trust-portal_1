@@ -1,23 +1,26 @@
 # Trust Portal
 
 ## Current State
-The Manavdeep Seva Trust website is fully built with Home, About, Programs, Gallery, Donations, Contact, Awards & Recognition, and Admin Panel pages. The Admin Panel uses Internet Identity login to allow uploading/deleting photos and videos via blob-storage. The custom domain (manavdeepsevatrust.org) is having connectivity issues (ERR_TUNNEL_CONNECTION_FAILED), preventing admin access.
+Admin Panel requires Internet Identity login to upload photos/videos. User is unable to access Admin Panel via custom domain (ERR_TUNNEL_CONNECTION_FAILED) and struggles with Internet Identity login process. Photo uploads via Caffeine chat are blocked due to file count limit.
 
 ## Requested Changes (Diff)
 
 ### Add
-- On the Admin login page, show a helpful message explaining that if the custom domain doesn't work, user can use the direct ICP link
-- Show the user their current page URL so they can navigate directly
-- Add a visible note on Admin page about alternative access if custom domain fails
+- A simple password-protected upload page at `/upload` that does not require Internet Identity
+- Simple password input (hardcoded admin password) to protect the upload page
+- Drag-and-drop or click-to-select file upload for photos directly to blob-storage gallery
+- After upload, photos should appear in the Gallery section
 
 ### Modify
-- Admin page login section: add a helper text below the login button showing instructions in Hindi for accessing admin panel if custom domain is not working
-- Ensure the login button works correctly with Internet Identity
+- Keep existing Admin Panel with Internet Identity for full management (delete, manage)
+- Gallery page continues to show both static and backend-uploaded photos
 
 ### Remove
-- Nothing to remove
+- Nothing removed
 
 ## Implementation Plan
-1. Update Admin.tsx to add a helpful Hindi message below the login button about accessing admin panel via direct link
-2. Add a note that if custom domain fails, they should use the Caffeine preview link with /admin appended
-3. Keep all existing functionality intact
+1. Add a new `/upload` route in App.tsx
+2. Create a new UploadPage component with simple password protection (password: "manavdeep2024")
+3. On correct password, show file upload form using ExternalBlob to upload directly to blob-storage
+4. Show upload progress and success message
+5. Photos uploaded here appear in Gallery automatically via existing useGetAllPhotos hook

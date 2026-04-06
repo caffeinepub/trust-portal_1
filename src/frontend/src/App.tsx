@@ -12,6 +12,7 @@ import Donations from "./pages/Donations";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Programs from "./pages/Programs";
+import Upload from "./pages/Upload";
 
 const rootRoute = createRootRoute({
   component: Layout,
@@ -59,6 +60,12 @@ const adminRoute = createRoute({
   component: Admin,
 });
 
+const uploadRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/upload",
+  component: Upload,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
@@ -67,6 +74,7 @@ const routeTree = rootRoute.addChildren([
   galleryRoute,
   contactRoute,
   adminRoute,
+  uploadRoute,
 ]);
 
 const router = createRouter({ routeTree });
